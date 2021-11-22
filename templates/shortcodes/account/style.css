@@ -1,0 +1,7 @@
+.user-account a{
+    display: flex;
+    align-items: center;
+}
+.user-account .account-icon{
+    margin-right: 10px;
+}

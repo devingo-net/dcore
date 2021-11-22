@@ -1,0 +1,19 @@
+<li class="search-result-item uk-margin-small-bottom">
+    <div class="uk-grid-medium uk-flex-middle" uk-grid>
+        <# if ( data.image !== false ) { #>
+        <div class="uk-width-auto">
+            <a href="{{data.link}}">
+                <img src="{{data.image}}" width="60" height="60" alt="{{data.title}}">
+            </a>
+        </div>
+        <# } #>
+        <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove">
+                <a class="uk-link-reset" href="{{data.link}}">{{data.title}}</a>
+            </h4>
+            <p class="uk-comment-meta uk-margin-remove-top">
+                <a class="uk-link-reset" href="{{data.link}}">{{data.subtitle}}</a>
+            </p>
+        </div>
+    </div>
+</li>

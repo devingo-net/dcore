@@ -1,0 +1,18 @@
+
+.dc-blog_posts-widget .widget-load-more{
+    text-align: center;
+    margin-top: 30px;
+}
+.dc-blog_posts-widget.paginate-type-loadmore.widget-loading .widget-load-more{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.dc-blog_posts-widget.paginate-type-number.widget-loading{
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.dc-blog_posts-widget .widget-auto-load{
+    margin-top: 30px;
+}

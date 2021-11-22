@@ -1,0 +1,79 @@
+.customize-control-tab {
+    transition: .2s;
+}
+
+.customize-control-tab .customize-tab-header {
+    cursor: pointer;
+    padding: 10px 15px;
+    color: #666;
+    margin: 0 -12px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition: .2s;
+}
+
+.customize-control-tab.show .customize-tab-header {
+    background-color: transparent;
+}
+
+.customize-control-tab .customize-tab-header .customize-tab-title {
+    flex: 1;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.customize-control-tab.show .customize-tab-header .customize-tab-title {
+    font-size: 18px;
+}
+
+.customize-control-tab .customize-tab-header .customize-tab-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.customize-control-tab:hover .customize-tab-header .customize-tab-icon {
+    background: #eee;
+}
+
+.customize-control-tab.show .customize-tab-header .customize-tab-icon {
+    transform: rotate(180deg);
+}
+
+.customize-control-tab .customize-tab-mods {
+    display: flex;
+    margin: 0 -12px;
+    background: #f1f1f1;
+}
+.customize-control-tab:not(.show) .customize-tab-mods{
+    display: none;
+}
+
+.customize-control-tab .customize-tab-mods .mod-item {
+    display: block;
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+    transition: .2s;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    user-select: none;
+}
+
+.customize-control-tab .customize-tab-mods .mod-item:hover {
+    background: #fff;
+    color: #333;
+}
+
+.customize-control-tab .customize-tab-mods .mod-item.active {
+    background: #666;
+    color: #fff;
+}

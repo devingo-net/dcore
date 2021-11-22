@@ -1,0 +1,16 @@
+{
+  "name": "Flat Design",
+  "colors": {
+    "text_color": {
+      "name": "text_color",
+      "conditions": {
+        "cardStyle": "flat.php"
+      }
+
+    },
+    "buttons_color": {
+      "name": "buttons_color"
+    }
+  },
+  "disabledOptions": []
+}

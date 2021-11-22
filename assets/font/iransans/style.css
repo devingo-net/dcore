@@ -1,0 +1,36 @@
+/*
+Font Name: ایران سانس
+Font Family: IRANSans_Fa
+*/
+@font-face {
+    font-family: IRANSans_Fa;
+    font-style: normal;
+    font-weight: bold;
+    src: url('eot/IRANSansWeb(FaNum)_Bold.eot');
+    src: url('eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'),
+    url('woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),
+    url('woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),
+    url('ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans_Fa;
+    font-style: normal;
+    font-weight: 500;
+    src: url('eot/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'),
+    url('woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'),
+    url('woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'),
+    url('ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans_Fa;
+    font-style: normal;
+    font-weight: normal;
+    src: url('eot/IRANSansWeb(FaNum).eot');
+    src: url('eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'),
+    url('woff2/IRANSansWeb(FaNum).woff2') format('woff2'),
+    url('woff/IRANSansWeb(FaNum).woff') format('woff'),
+    url('ttf/IRANSansWeb(FaNum).ttf') format('truetype');
+}

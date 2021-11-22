@@ -1,0 +1,33 @@
+.custom-metabox-menu-icon .item-preview{
+    width: 50px;
+    margin-right: 10px;
+}
+.custom-metabox-menu-icon .inner{
+    display: flex;
+    align-items: center;
+}
+.custom-metabox-menu-icon .item-preview[src=""] ~ .remove-item{
+    display: none;
+}
+.custom-metabox-menu-icon .remove-item{
+    margin-right: 10px;
+    display: block;
+    width: 20px;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    background: red;
+    color: #Fff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .7;
+}
+.custom-metabox-menu-icon .remove-item:hover{
+    opacity: 1;
+}
+[data-condition]:not(.csf-field){
+    display: none;
+}
+.ui-accordion .ui-accordion-header{
+    min-height: 24px;
+}

@@ -1,0 +1,4002 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Shop Design\n"
+"POT-Creation-Date: 2021-09-23 20:53+0330\n"
+"PO-Revision-Date: 2021-01-28 17:56+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: includes/languages\n"
+"X-Poedit-SearchPath-1: templates\n"
+"X-Poedit-SearchPath-2: woocommerce\n"
+"X-Poedit-SearchPath-3: includes\n"
+"X-Poedit-SearchPath-4: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: 404.php:14
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:15
+msgid ""
+"The page you were looking for could not be found. It might have been "
+"removed, renamed, or did not exist in the first place."
+msgstr ""
+
+#: comments.php:24
+msgid "You can also comment on this."
+msgstr ""
+
+#: comments.php:25
+msgid "To post a comment, use the Add New Comment button."
+msgstr ""
+
+#: comments.php:30 templates/timcheh/shortcodes.php:247
+#: woocommerce/single-product-reviews.php:37
+msgid "Add comment"
+msgstr ""
+
+#: comments.php:58
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:59
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:71 includes/settings/sections/woocommerce.php:216
+msgid "Comments"
+msgstr ""
+
+#: comments.php:107
+msgid "Comments are closed."
+msgstr ""
+
+#: dokan/global/product-tab.php:11
+msgid "Vendor Information"
+msgstr ""
+
+#: dokan/global/product-tab.php:18 templates/timcheh/shortcodes.php:32
+msgid "Store Name:"
+msgstr ""
+
+#: dokan/global/product-tab.php:27
+msgid "Vendor:"
+msgstr ""
+
+#: dokan/global/product-tab.php:36
+msgid "Address:"
+msgstr ""
+
+#: includes/classes/Api/Blog_Posts.php:39
+#: includes/classes/Api/Grid_Product.php:38
+#: includes/classes/Api/Product_Carousel.php:36
+#: includes/classes/Api/Product_Carousel.php:102
+msgid "Page is not found!"
+msgstr ""
+
+#: includes/classes/Api/Blog_Posts.php:49
+#: includes/classes/Api/Blog_Posts.php:59
+#: includes/classes/Api/Grid_Product.php:48
+#: includes/classes/Api/Grid_Product.php:58
+#: includes/classes/Api/Product_Carousel.php:46
+#: includes/classes/Api/Product_Carousel.php:60
+#: includes/classes/Api/Product_Carousel.php:112
+#: includes/classes/Api/Product_Carousel.php:126
+msgid "Widget is not found!"
+msgstr ""
+
+#: includes/classes/Api/Cart.php:40
+msgid "Product ID is incorrect"
+msgstr ""
+
+#: includes/classes/Api/Cart.php:61
+msgid "The product has no price! "
+msgstr ""
+
+#: includes/classes/Api/Cart.php:78
+#, php-format
+msgid "%s x %s added to your cart."
+msgstr ""
+
+#: includes/classes/Api/Cart.php:93
+msgid "An error occurred while adding the product to the cart! "
+msgstr ""
+
+#: includes/classes/Api/Favorite.php:33 includes/classes/Api/Favorite.php:59
+msgid "Item ID is incorrect"
+msgstr ""
+
+#: includes/classes/Api/Favorite.php:36
+#, php-format
+msgid "\"%s\" added to your favorites."
+msgstr ""
+
+#: includes/classes/Api/Favorite.php:41
+msgid "An error occurred while adding the item to your favorites! "
+msgstr ""
+
+#: includes/classes/Api/Favorite.php:63
+#, php-format
+msgid "\"%s\" removed from your favorites."
+msgstr ""
+
+#: includes/classes/Api/Favorite.php:68
+msgid "An error occurred while removing item from your favorites! "
+msgstr ""
+
+#: includes/classes/Api/Product_Carousel.php:51
+#: includes/classes/Api/Product_Carousel.php:68
+#: includes/classes/Api/Product_Carousel.php:117
+#: includes/classes/Api/Product_Carousel.php:134
+msgid "Tab is not found!"
+msgstr ""
+
+#: includes/classes/Api/Quick_View.php:34
+msgid "Product not found!"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:50
+msgid "Source"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:53
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:178
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:63
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:81
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:82
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:132
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:81
+msgid "Manual Selection"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:54
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:59
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:60
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:110
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:59
+msgid "Current Query"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:68
+msgid "Include"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:79
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:194
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:76
+#: includes/classes/Elementor/Modules/Page/Widgets/Single_Product.php:48
+msgid "Search & Select"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:96
+msgid "Include By"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:100
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:115
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:179
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:215
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:43
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:82
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:87
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:83
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:88
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:133
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:138
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:82
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:87
+msgid "Term"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:101
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:139
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:180
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:238
+msgid "Author"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:116
+msgid ""
+"Terms are items in a taxonomy. The available taxonomies are: Categories, "
+"Tags, Formats and custom taxonomies."
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:162
+msgid "Exclude"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:173
+msgid "Exclude By"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:177
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:80
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:81
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:131
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:80
+msgid "Current Post"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:260
+msgid "Avoid Duplicates"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:263
+msgid ""
+"Set to Yes to avoid duplicate posts from showing up. This only effects the "
+"frontend."
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:276
+msgid "Offset"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:285
+msgid "Use this setting to skip over posts (e.g. '2' to skip over 2 posts)."
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:292
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:356
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:69
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:70
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:120
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:69
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:71
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:71
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Date"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:296
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:128
+msgid "All"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:297
+msgid "Past Day"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:298
+msgid "Past Week"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:299
+msgid "Past Month"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:300
+msgid "Past Quarter"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:301
+msgid "Past Year"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:302
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:65
+msgid "Custom"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:316
+#: templates/globals/loop/pagination.php:18
+#: templates/shortcodes/grid_product/index.php:51
+#: woocommerce/loop/pagination.php:41
+msgid "Before"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:321
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:339
+msgid "Choose"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:329
+msgid ""
+"Setting a ‘Before’ date will show all the posts published until the chosen "
+"date (inclusive)."
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:334
+msgid "After"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:347
+msgid ""
+"Setting an ‘After’ date will show all the posts published since the chosen "
+"date (inclusive)."
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:352
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:67
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:67
+msgid "Order By"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:357
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:153
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:90
+#: includes/classes/Elementor/Modules/Page/Widgets/Custom_Carousel.php:46
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:70
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:81
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:71
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:79
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:121
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:70
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:307
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:336
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:366
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:408
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:439
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price_Changes.php:65
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:72
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:56
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:41
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:72
+#: includes/settings/sections/single/product.php:93
+#: includes/settings/sections/single/product.php:164
+#: includes/settings/sections/single/product.php:188
+#: includes/settings/sections/single/product.php:213
+#: includes/settings/sections/single/product.php:243
+#: includes/settings/sections/single/product.php:262
+#: includes/settings/sections/woocommerce.php:43
+#: includes/settings/sections/woocommerce.php:117
+#: includes/settings/sections/woocommerce.php:157
+msgid "Title"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:358
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:75
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:76
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:126
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:75
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:77
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:77
+msgid "Menu Order"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:359
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:74
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:75
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:125
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:74
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:76
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:76
+msgid "Random"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:367
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:82
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:82
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Order"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:371
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:86
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:86
+msgid "ASC"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:372
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:87
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:87
+msgid "DESC"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:380
+msgid "Posts Per Page"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:389
+msgid "Ignore Sticky Posts"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:395
+msgid "Sticky-posts ordering is visible on frontend only"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:399
+msgid "Query ID"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Query.php:402
+msgid "Give your Query a custom unique id to allow server side filtering"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:34
+msgid "Related"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:59
+msgid "Fallback"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:62
+#: includes/classes/Elementor/Widget.php:897
+#: includes/settings/framework/fields/border/border.php:59
+#: includes/settings/framework/fields/typography/typography.php:199
+#: includes/settings/framework/fields/typography/typography.php:213
+msgid "None"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:64
+msgid "Recent Posts"
+msgstr ""
+
+#: includes/classes/Elementor/Control_Types/Group_Control_Related.php:67
+msgid ""
+"Displayed if no relevant results are found. Manual selection display order "
+"is random"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Assets/Icons/Font_Awesome_Pro.php:9
+msgid "Font Awesome Pro"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Assets/Icons/Font_Awesome_Pro.php:20
+msgid "Font Awesome - Regular Pro"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Assets/Icons/Font_Awesome_Pro.php:32
+msgid "Font Awesome - Solid Pro"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Assets/Icons/Font_Awesome_Pro.php:44
+msgid "Font Awesome - Brands Pro"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Assets/Icons/Font_Awesome_Pro.php:56
+msgid "Font Awesome - Duotone Pro"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Document.php:11
+msgid "Header widgets"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:37
+msgid "Account"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:45
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:169
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:45
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:95
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:86
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:252
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:109
+msgid "Link"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:47
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:171
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:47
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:97
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Carousel.php:55
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:88
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:91
+msgid "https://your-link.com"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:57
+msgid "Account Items Alignment"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:61
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:62
+msgid "To Right"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:65
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:66
+#: includes/classes/Elementor/Widget.php:459
+#: includes/classes/Elementor/Widget.php:535
+#: includes/settings/framework/fields/typography/typography.php:172
+msgid "Center"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:69
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:70
+msgid "To left"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:79
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:96
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:160
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:81
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:98
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:91
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:85
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:97
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:82
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:85
+#: includes/hooks/Metabox.php:82
+#: includes/settings/sections/single/product.php:98
+#: includes/settings/sections/woocommerce.php:48
+#: includes/settings/sections/woocommerce.php:167
+msgid "Icon"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:87
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:89
+msgid "Icon Visibility"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:89
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:120
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:91
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:122
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:150
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:65
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:54
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:49
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:47
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:49
+msgid "Show"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:90
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:121
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:92
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:123
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:151
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:66
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:55
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:71
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:48
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:48
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:48
+msgid "Hide"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:110
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:112
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:129
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:89
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:108
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:224
+msgid "Text"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:118
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:120
+msgid "Text Visibility"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:127
+msgid "Before Login Text"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:129
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:137
+msgid "User Account"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:135
+msgid "After Login Text"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:146
+msgid "Links"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:155
+msgid "Item Title"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:181
+msgid "Show if"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:190
+msgid "Account Menu Links"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Account.php:195
+msgid "Logout"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:35
+#: woocommerce/cart/cart-steps.php:21
+msgid "Cart"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:58
+msgid "Cart Items Alignment"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:131
+msgid "Cart Items"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:140
+#: includes/classes/Elementor/Widget.php:907
+msgid "Count"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Cart.php:148
+msgid "Count Visibility"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:55
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:75
+#: includes/classes/Elementor/Modules/Menu/Document.php:33
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:117
+msgid "Menu"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:69
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:109
+msgid "There are no menus in your site."
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:69
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:110
+#, php-format
+msgid ""
+"Go to the <a href=\"%s\" target=\"_blank\">Menus screen</a> to create one."
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:81
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:123
+#, php-format
+msgid ""
+"Go to the <a href=\"%s\" target=\"_blank\">Menus screen</a> to manage your "
+"menus."
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:87
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Messages.php:42
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Ribbons.php:42
+msgid "Item"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Menu.php:89
+msgid "Dropdown"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:37
+msgid "Field"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:45
+msgid "Placeholder"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:47
+msgid "Search in products..."
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:53
+msgid "Filter"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:63
+msgid "Category Filter"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:73
+msgid "Button"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:81
+msgid "Button type"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:110
+msgid "Search"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:119
+msgid "Search Settings"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:124
+msgid "Post Type"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:129
+#: templates/single/navigation.php:31
+msgid "Post"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:130
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Compare.php:42
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Like.php:42
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:77
+#: includes/settings/sections/woocommerce.php:25 woocommerce/cart/cart.php:32
+#: woocommerce/cart/cart.php:79 woocommerce/checkout/form-pay.php:27
+#: woocommerce/checkout/review-order.php:23
+#: woocommerce/order/order-details.php:52
+msgid "Product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:135
+msgid "Results Type"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:139
+msgid "Both"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:140
+msgid "Posts"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:141
+msgid "Taxonomy"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:145
+msgid "Result Count"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:154
+msgid "Ajax Search"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:156
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:77
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:137
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:179
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:46
+#: includes/classes/Elementor/Widget.php:844
+#: includes/classes/Elementor/Widget.php:1128
+#: includes/settings/framework/fields/link_color/link_color.php:38
+msgid "Active"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:157
+msgid "DeActive"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Header/Widgets/Search.php:163
+msgid "Parent"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Document.php:20
+msgid "Menu widgets"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:55
+msgid "Tab"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:59
+msgid "Event Type"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:63
+msgid "Click"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:64
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:178
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:45
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Featured_Attributes.php:43
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Messages.php:44
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price.php:42
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Ribbons.php:44
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Short_Description.php:41
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:47
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:48
+#: includes/classes/Elementor/Widget.php:381
+#: includes/classes/Elementor/Widget.php:1127
+#: includes/classes/Elementor/Widget.php:1134
+#: includes/settings/framework/fields/link_color/link_color.php:37
+msgid "Hover"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:70
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:128
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:154
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:175
+msgid "Tab Items"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:76
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:136
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:177
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Additional_Information.php:66
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Content.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:44
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:50
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Featured_Attributes.php:38
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Featured_Attributes.php:42
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:47
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Messages.php:40
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Messages.php:43
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price.php:41
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price_Changes.php:75
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:95
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Reviews.php:38
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Ribbons.php:40
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Ribbons.php:43
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Short_Description.php:40
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:46
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Timer.php:41
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:47
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:95
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Videos.php:41
+#: includes/classes/Elementor/Widget.php:380
+#: includes/classes/Elementor/Widget.php:843
+#: includes/classes/Elementor/Widget.php:1126
+#: includes/classes/Elementor/Widget.php:1133 includes/hooks/Metabox.php:95
+#: includes/settings/framework/fields/background/background.php:270
+#: includes/settings/framework/fields/link_color/link_color.php:36
+#: includes/settings/framework/fields/typography/typography.php:186
+msgid "Normal"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Menu/Widgets/Tabbed_Menu.php:135
+msgid "Tab Items Icon"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Document.php:20
+msgid "Page widgets"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Document.php:33
+#: templates/single/content.php:50
+msgid "Page"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Carousel.php:41
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:41
+#: includes/classes/Elementor/Modules/Page/Widgets/Custom_Carousel.php:39
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:41
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:41
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:42
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:41
+#: includes/settings/sections/single/product.php:159
+msgid "Contents"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Carousel.php:46
+msgid "Archive Title"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Carousel.php:48
+msgid "News"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Carousel.php:53
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:89
+msgid "Archive Link"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:60
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:107
+msgid "Layout"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:65
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:112
+#: includes/settings/sections/theme.php:101
+#: includes/settings/sections/theme.php:119
+#: includes/settings/sections/woocommerce.php:329
+msgid "Columns"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:76
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:123
+#: includes/classes/Elementor/Widget.php:666
+msgid "Padding"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:103
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:150
+msgid "Pagination"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:107
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:154
+msgid "Pagination Type"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:111
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:121
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:158
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:168
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:53
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:66
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:74
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:51
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:62
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:73
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:299
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:328
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:358
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:400
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:431
+#: includes/classes/Elementor/Widget.php:198
+#: includes/classes/Elementor/Widget.php:207
+#: includes/classes/Elementor/Widget.php:217
+#: includes/classes/Elementor/Widget.php:227
+#: includes/classes/Elementor/Widget.php:984
+#: includes/classes/Elementor/Widget.php:1045
+#: includes/classes/Elementor/Widget.php:1053
+#: includes/classes/Elementor/Widget.php:1061
+#: includes/classes/Elementor/Widget.php:1072
+#: includes/classes/Elementor/Widget.php:1080
+#: includes/classes/Elementor/Widget.php:1096
+#: includes/classes/Elementor/Widget.php:1106
+#: includes/classes/Elementor/Widget.php:1116
+msgid "False"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:112
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:159
+msgid "Number"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:113
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:160
+#: templates/shortcodes/blog_posts/index.php:54
+#: templates/shortcodes/grid_product/index.php:59
+msgid "Load more"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:114
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:161
+msgid "Auto load"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:118
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:165
+msgid "Ajax paginate"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Blog_Posts.php:120
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:167
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:52
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:65
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:73
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:50
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:61
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:72
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:298
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:327
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:357
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:399
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:430
+#: includes/classes/Elementor/Widget.php:197
+#: includes/classes/Elementor/Widget.php:206
+#: includes/classes/Elementor/Widget.php:216
+#: includes/classes/Elementor/Widget.php:226
+#: includes/classes/Elementor/Widget.php:983
+#: includes/classes/Elementor/Widget.php:1044
+#: includes/classes/Elementor/Widget.php:1052
+#: includes/classes/Elementor/Widget.php:1060
+#: includes/classes/Elementor/Widget.php:1071
+#: includes/classes/Elementor/Widget.php:1079
+#: includes/classes/Elementor/Widget.php:1095
+#: includes/classes/Elementor/Widget.php:1105
+#: includes/classes/Elementor/Widget.php:1115
+msgid "True"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Custom_Carousel.php:51
+#: includes/classes/Elementor/Modules/Page/Widgets/Single_Product.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Content.php:37
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price_Changes.php:57
+#: includes/settings/sections/single/product.php:169
+msgid "Content"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Custom_Carousel.php:54
+msgid "Type your content here"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Custom_Carousel.php:59
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:105
+msgid "Slide Items"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:60
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:61
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:111
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:159
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:60
+msgid "Latest Products"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:61
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:62
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:112
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:61
+#: templates/shortcodes/product_meta/index.php:119
+#: woocommerce/content-single-product.php:165
+msgid "Sale"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:62
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:63
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:113
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:62
+msgid "Featured"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:63
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:64
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:114
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:63
+msgctxt "Posts Query Control"
+msgid "Manual Selection"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:71
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:72
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:122
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:71
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:73
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:73
+#: woocommerce/cart/cart.php:33 woocommerce/cart/cart.php:99
+#: woocommerce/single-product/add-to-cart/simple.php:44
+#: woocommerce/single-product/add-to-cart/variation.php:23
+msgid "Price"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:72
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:73
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:123
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:72
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:74
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:74
+#: includes/hooks/Woocommerce.php:58
+msgid "Popularity"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Grid_Product.php:73
+#: includes/classes/Elementor/Modules/Page/Widgets/Instant_Offer.php:74
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:124
+#: includes/classes/Elementor/Modules/Page/Widgets/Sale_Slider.php:73
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:75
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:75
+#: includes/settings/sections/single/product.php:112
+msgid "Rating"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:43
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Featured_Attributes.php:40
+msgid "Items"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:47
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:177
+#: includes/classes/Elementor/Widget.php:635
+msgid "Height"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:77
+#: woocommerce/cart/cart.php:31
+msgid "Image"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:97
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Short_Description.php:38
+#: includes/settings/sections/woocommerce.php:162
+#: woocommerce/single-product/tabs/description.php:22
+msgid "Description"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Image_Slider.php:100
+msgid "Type your description here"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:50
+msgid "Hide Tabs"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:63
+msgid "Pre Load"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:71
+msgid "Ajax Load More"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Page/Widgets/Product_Carousel.php:81
+msgid "Latest products"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Document.php:22
+msgid "Product Single widgets"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Document.php:35
+msgid "Product Single"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Compare.php:19
+msgid "Compare product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Compare.php:32
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Like.php:32
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:67
+msgid "Query"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Compare.php:36
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Like.php:36
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:71
+msgid "Current product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Compare.php:37
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Like.php:37
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:72
+msgid "Custom product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Like.php:19
+msgid "Like & Dislike product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:18
+msgid "Share post"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:31
+msgid "Social"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:35
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:73
+msgid "Blogger"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:36
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:74
+msgid "Diaspora"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:37
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:75
+msgid "Douban"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:38
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:76
+msgid "EMail"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:77
+msgid "EverNote"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:40
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:78
+msgid "Pocket"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:41
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:79
+msgid "FaceBook"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:42
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:80
+msgid "FlipBoard"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:43
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:81
+msgid "InstaPaper"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:44
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:82
+msgid "Line.me"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:45
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:83
+msgid "LinkedIn"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:46
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:84
+msgid "LiveJournal"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:47
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:85
+msgid "GMail"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:48
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:86
+msgid "HackerNews"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:49
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:87
+msgid "OK.ru"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:50
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:88
+msgid "Pinterest"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:51
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:89
+msgid "QZone"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:52
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:90
+msgid "Reddit"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:53
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:91
+msgid "RenRen"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:54
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:92
+msgid "Skype"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:55
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:93
+msgid "SMS"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:56
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:94
+msgid "Telegram.me"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:57
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:95
+msgid "Tumblr"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:58
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:96
+msgid "Twitter"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:59
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:97
+msgid "VK"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:60
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:98
+msgid "Weibo"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:61
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:99
+msgid "WhatsApp"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:62
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:100
+msgid "Xing"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Tags/Share.php:63
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:101
+msgid "Yahoo"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:40
+#: templates/globals/cards/instant-offer/classic.php:57
+#: templates/globals/cards/product/classic-pro.php:110
+#: templates/globals/cards/product/classic.php:57
+#: templates/globals/slices/quick-view.php:56
+msgid "Add to cart"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:48
+msgid "Hide Quantity"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:59
+msgid "Hide Description"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:70
+msgid "Hide Reset Variations Button"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:83
+msgid "Add to cart button"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_AddToCart.php:85
+#: woocommerce/cart/cart.php:34 woocommerce/cart/cart.php:105
+#: woocommerce/global/quantity-input.php:28
+msgid "Quantity"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Additional_Information.php:44
+msgid "Additional Information"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Additional_Information.php:51
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:46
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:46
+msgid "Heading"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Additional_Information.php:53
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:99
+#: includes/settings/framework/fields/switcher/switcher.php:21
+msgid "Off"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Additional_Information.php:54
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:100
+#: includes/settings/framework/fields/switcher/switcher.php:20
+msgid "On"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Additional_Information.php:64
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:38
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Featured_Attributes.php:36
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Messages.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price_Changes.php:74
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:94
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Reviews.php:36
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Ribbons.php:39
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:94
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Videos.php:40
+msgid "Box"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:42
+msgid "Tab item"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Data_Tabs.php:48
+msgid "Tab Content"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:42
+#: includes/classes/Elementor/Widget.php:837
+msgid "Slider"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:47
+#: includes/settings/sections/woocommerce.php:204
+msgid "Gallery"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:52
+msgid "Slider arrows"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:62
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:72
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:118
+msgid "Thumbnails"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:67
+msgid "Slider Thumbnails"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:73
+msgid "Dots"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:77
+#: includes/classes/Elementor/Widget.php:913
+msgid "Slides Per View"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:92
+msgid "Gallery Style"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:103
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:135
+#: includes/classes/Elementor/Widget.php:588
+msgid "Border Radius"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:112
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Gallery.php:147
+msgid "Spacing"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:41
+msgid "Hooks"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:51
+msgid "Hook"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:55
+msgid "Woocommerce before single product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:57
+msgid "Woocommerce before single product summary"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:59
+msgid "Woocommerce single product summary"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:61
+msgid "Woocommerce after single product summary"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Hooks.php:63
+msgid "Woocommerce after single product"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:44
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:112
+msgid "Style"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:53
+msgid ""
+"The style of this widget is often affected by your theme and plugins. If "
+"you experience any such issue, try to switch to a basic theme and "
+"deactivate related plugins."
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:61
+msgid "View"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:65
+msgid "Table"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:66
+msgid "Stacked"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:67
+msgid "Inline"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:76
+#: includes/classes/Elementor/Widget.php:1032
+msgid "Space Between"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:97
+msgid "Divider"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:115
+#: includes/settings/framework/fields/border/border.php:51
+#: includes/settings/framework/fields/typography/typography.php:214
+msgid "Solid"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:116
+#: includes/settings/framework/fields/border/border.php:54
+#: includes/settings/framework/fields/typography/typography.php:215
+msgid "Double"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:117
+#: includes/settings/framework/fields/border/border.php:53
+#: includes/settings/framework/fields/typography/typography.php:216
+msgid "Dotted"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:118
+#: includes/settings/framework/fields/border/border.php:52
+#: includes/settings/framework/fields/typography/typography.php:217
+msgid "Dashed"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:134
+msgid "Weight"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:158
+#: includes/classes/Elementor/Widget.php:601 includes/hooks/Metabox.php:101
+msgid "Width"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:206
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:241
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:269
+#: includes/settings/framework/fields/background/background.php:278
+#: includes/settings/sections/woocommerce.php:53
+msgid "Color"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:282
+msgid "Captions"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:290
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:296
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:309
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:325
+msgid "Category"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:319
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:338
+msgid "Tag"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:348
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:355
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:368
+msgid "SKU"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:378
+msgid "Missing"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:380
+#: woocommerce/order/order-details-customer.php:36
+#: woocommerce/order/order-details-customer.php:64
+msgid "N/A"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:390
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:397
+msgid "Sale Count"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:410
+msgid "Sale count"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:421
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:428
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Meta.php:441
+msgid "Rates"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Price_Changes.php:67
+msgid "Price changes"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Rating.php:40
+msgid "Star"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Rating.php:44
+msgid "Stars size"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:43
+msgid "Related Products"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Related.php:56
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:56
+msgid "Products count"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:41
+msgid "Share Items"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:45
+msgid "Short link"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:61
+msgid "Link type"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:64
+msgid "Defaults"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:70
+msgid "Socials"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:111
+msgid "use {title} for post title, {url} for url & {desc} for post excerpts."
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Share.php:117
+msgid "Social Items"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:40
+msgid "Sub Title"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:54
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:55
+msgid "Size"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:58
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:59
+msgid "H1"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:59
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:60
+msgid "H2"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:60
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:61
+msgid "H3"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:61
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:62
+msgid "H4"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:62
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:63
+msgid "H5"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_SubTitle.php:63
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Title.php:64
+msgid "H6"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Timer.php:39
+msgid "Timer"
+msgstr ""
+
+#: includes/classes/Elementor/Modules/Product_Single/Widgets/Product_Upsell.php:43
+msgid "Upsell Products"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:124
+msgid "Widget Designs"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:138
+msgid "Widget Style"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:148
+#: includes/settings/sections/theme.php:166
+msgid "Colors"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:188
+msgid "Visibility"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:194
+msgid "Hide Before Login"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:195
+#: includes/classes/Elementor/Widget.php:204
+#: includes/classes/Elementor/Widget.php:214
+#: includes/classes/Elementor/Widget.php:224
+msgid "The html would not be rendered"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:203
+msgid "Hide After Login"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:213
+msgid "Hide in Mobile"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:223
+msgid "Hide in Desktop"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:382
+#: includes/settings/framework/fields/link_color/link_color.php:40
+msgid "Focus"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:422
+msgid "Opacity"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:451
+msgid "Box Alignment"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:455
+#: includes/classes/Elementor/Widget.php:531
+#: includes/settings/framework/fields/typography/typography.php:171
+msgid "Left"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:463
+#: includes/classes/Elementor/Widget.php:539
+#: includes/settings/framework/fields/typography/typography.php:173
+msgid "Right"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:467
+#: includes/classes/Elementor/Widget.php:543
+msgid "Justified"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:484
+#: includes/settings/sections/theme.php:197
+msgid "Typography"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:494
+#: includes/settings/framework/fields/typography/typography.php:233
+msgid "Font Size"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:527
+msgid "Alignment"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:556
+msgid "Text Color"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:569
+msgid "Text Shadow"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:579
+msgid "Box Shadow"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:584
+msgid "Border"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:677
+msgid "Margin"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:690
+msgid "Background"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:801
+#: includes/settings/sections/theme.php:38
+msgid "Card Style"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:811
+msgid "Widget Styles"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:817
+msgid "Primary Color"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:822
+msgid "Secondary Color"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:854
+msgid "Slider Direction"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:858
+msgid "Horizontal"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:859
+msgid "Vertical"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:863
+msgid "Slider Height"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:893
+msgid "Slide Animation"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:898
+msgid "Fade"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:899
+msgid "CoverFlow"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:900
+msgid "Flip Effect"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:901
+msgid "Cube Effect"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:905
+msgid "Slides Count Mode"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:908
+#: includes/settings/framework/fields/background/background.php:221
+msgid "Auto"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:926
+msgid "Slides Width"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:953
+#: includes/classes/Elementor/Widget.php:1004
+msgid "Slides Height"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:981
+msgid "Slides Column"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:992
+msgid "Slides Per Column"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1024
+msgid "Slides Per Group"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1042
+msgid "Centered Slides"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1050
+msgid "Allow Touch Move"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1058
+msgid "Free Mode"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1069
+msgid "Infinite Loop"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1077
+msgid "Auto Play"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1085
+msgid "Auto Play Duration"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1093
+#: includes/classes/Elementor/Widget.php:1130
+msgid "Slider Navigations"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1103
+#: includes/classes/Elementor/Widget.php:1122
+msgid "Slider Pagination"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1113
+msgid "Slider Scroll Bar"
+msgstr ""
+
+#: includes/classes/Elementor/Widget.php:1135
+#: includes/settings/framework/fields/sorter/sorter.php:22
+msgid "Disabled"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:37
+msgid "Positive rates"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:39
+msgid "Negative rates"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:50
+msgid "Send as an unknown user?"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:102
+msgid "Unknown"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:248
+msgid "Was this comment helpful to you? "
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:250
+msgid "Like comment"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:251
+msgid "Like"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:253
+msgid "Dislike comment"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:254
+msgid "Dislike"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:268
+msgid "You are not allowed to submit requests!"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:286
+msgid "File size is not allowed!"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:320
+#: includes/classes/Features/Advanced_Reviews.php:343
+msgid "An error occurred!"
+msgstr ""
+
+#: includes/classes/Features/Advanced_Reviews.php:339
+msgid "Item deleted!"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:43
+#: includes/classes/Features/Checkout.php:58
+msgid "Map address"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:161
+#: includes/classes/Features/Checkout.php:233
+msgid "Undefined"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:163
+msgid "Delivery time:"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:170
+#: includes/classes/Features/Checkout.php:180
+msgid "Map address:"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:171
+#: includes/classes/Features/Checkout.php:181
+msgid "See on google map"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:190
+msgid "Delivery time is a required field!"
+msgstr ""
+
+#: includes/classes/Features/Checkout.php:219
+msgid "Delivery Time"
+msgstr ""
+
+#: includes/classes/Metabox.php:78
+#: includes/settings/framework/fields/media/media.php:23
+#: includes/settings/framework/fields/upload/upload.php:21
+msgid "Upload"
+msgstr ""
+
+#: includes/classes/Metabox.php:80
+#: includes/settings/framework/fields/media/media.php:24
+#: includes/settings/framework/fields/upload/upload.php:22
+#: templates/globals/slices/favorites.php:47 woocommerce/cart/cart.php:30
+msgid "Remove"
+msgstr ""
+
+#: includes/functions/User.php:104
+msgid "Guest"
+msgstr ""
+
+#: includes/functions/Woocommerce.php:110
+msgid "Quick view"
+msgstr ""
+
+#: includes/hooks/Enqueue.php:25
+msgid "An error occurred while processing!"
+msgstr ""
+
+#: includes/hooks/Enqueue.php:61
+msgid "Are you sure you want to perform this operation?"
+msgstr ""
+
+#: includes/hooks/General.php:51
+msgid "Primary Menu"
+msgstr ""
+
+#: includes/hooks/General.php:52
+msgid "Footer Menu"
+msgstr ""
+
+#: includes/hooks/General.php:59
+msgid "Pages"
+msgstr ""
+
+#: includes/hooks/General.php:67 includes/settings/sections/theme.php:25
+msgid "Blog"
+msgstr ""
+
+#: includes/hooks/General.php:75
+msgid "Shop Archive"
+msgstr ""
+
+#: includes/hooks/General.php:144
+msgid "DouTone icons"
+msgstr ""
+
+#: includes/hooks/General.php:148
+msgid "Brands icons"
+msgstr ""
+
+#: includes/hooks/General.php:152
+msgid "Regular icons"
+msgstr ""
+
+#: includes/hooks/General.php:156
+msgid "Solid icons"
+msgstr ""
+
+#: includes/hooks/Metabox.php:27 includes/hooks/Metabox.php:41
+msgid "Sub title"
+msgstr ""
+
+#: includes/hooks/Metabox.php:90
+msgid "Type"
+msgstr ""
+
+#: includes/hooks/Metabox.php:96
+msgid "Elementor"
+msgstr ""
+
+#: includes/hooks/Metabox.php:106
+msgid "Boxed"
+msgstr ""
+
+#: includes/hooks/Metabox.php:107
+msgid "Full Width"
+msgstr ""
+
+#: includes/hooks/Metabox.php:115
+msgid "Template"
+msgstr ""
+
+#: includes/hooks/Metabox.php:195
+msgid "Featured attribute"
+msgstr ""
+
+#: includes/hooks/Metabox.php:207
+msgid "Group name"
+msgstr ""
+
+#: includes/hooks/Woocommerce.php:57
+#: includes/settings/framework/fields/typography/typography.php:119
+#: includes/settings/framework/fields/typography/typography.php:132
+#: includes/settings/framework/fields/typography/typography.php:145
+#: includes/settings/framework/fields/typography/typography.php:160
+#: includes/settings/framework/fields/typography/typography.php:176
+#: includes/settings/framework/fields/typography/typography.php:189
+#: includes/settings/framework/fields/typography/typography.php:203
+#: includes/settings/framework/fields/typography/typography.php:221
+msgid "Default"
+msgstr ""
+
+#: includes/hooks/Woocommerce.php:59
+msgid "Average rating"
+msgstr ""
+
+#: includes/hooks/Woocommerce.php:60
+msgid "Newness"
+msgstr ""
+
+#: includes/hooks/Woocommerce.php:61
+msgid "Price: low to high"
+msgstr ""
+
+#: includes/hooks/Woocommerce.php:62
+msgid "Price: high to low"
+msgstr ""
+
+#: includes/hooks/Woocommerce.php:195
+msgid "Favorites"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:225
+msgid "Error while saving the changes."
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:285
+msgid "Settings successfully imported."
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:297
+#: includes/settings/framework/classes/admin-options.class.php:313
+msgid "Default settings restored."
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:384
+msgid "Settings saved."
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:563
+msgid "You have unsaved changes, save your changes!"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:565
+msgid "show all settings"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:567
+#: includes/settings/framework/fields/icon/icon.php:57
+#: includes/settings/framework/fields/map/map.php:23
+msgid "Search..."
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:570
+#: includes/settings/framework/classes/admin-options.class.php:693
+msgid "Save"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:570
+#: includes/settings/framework/classes/admin-options.class.php:693
+msgid "Saving..."
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:571
+#: includes/settings/framework/classes/admin-options.class.php:694
+msgid "Reset Section"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:571
+#: includes/settings/framework/classes/admin-options.class.php:694
+msgid "Are you sure to reset this section options?"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:572
+#: includes/settings/framework/classes/admin-options.class.php:695
+msgid "Reset All"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:572
+#: includes/settings/framework/classes/admin-options.class.php:695
+#: includes/settings/framework/classes/comment-options.class.php:215
+#: includes/settings/framework/classes/metabox-options.class.php:293
+#: includes/settings/framework/fields/backup/backup.php:31
+msgid "Reset"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:572
+#: includes/settings/framework/classes/admin-options.class.php:695
+msgid "Are you sure you want to reset all settings to default values?"
+msgstr ""
+
+#: includes/settings/framework/classes/admin-options.class.php:670
+#: includes/settings/framework/classes/comment-options.class.php:198
+#: includes/settings/framework/classes/metabox-options.class.php:276
+#: includes/settings/framework/fields/button_set/button_set.php:56
+#: includes/settings/framework/fields/checkbox/checkbox.php:76
+#: includes/settings/framework/fields/radio/radio.php:75
+#: includes/settings/framework/fields/select/select.php:113
+#: includes/settings/framework/functions/actions.php:41
+msgid "No data available."
+msgstr ""
+
+#: includes/settings/framework/classes/comment-options.class.php:216
+#: includes/settings/framework/classes/metabox-options.class.php:294
+msgid "update post"
+msgstr ""
+
+#: includes/settings/framework/classes/comment-options.class.php:216
+#: includes/settings/framework/classes/metabox-options.class.php:294
+msgid "Cancel"
+msgstr ""
+
+#: includes/settings/framework/classes/setup.class.php:533
+msgid "Are you sure?"
+msgstr ""
+
+#: includes/settings/framework/classes/setup.class.php:534
+#, php-format
+msgid "Please enter %s or more characters"
+msgstr ""
+
+#: includes/settings/framework/classes/setup.class.php:535
+msgid "Searching..."
+msgstr ""
+
+#: includes/settings/framework/classes/setup.class.php:536
+msgid "No results found."
+msgstr ""
+
+#: includes/settings/framework/classes/setup.class.php:641
+msgid "Oops! Not allowed."
+msgstr ""
+
+#: includes/settings/framework/classes/setup.class.php:715
+#: includes/settings/framework/classes/setup.class.php:719
+msgid "Field not found!"
+msgstr ""
+
+#: includes/settings/framework/classes/shortcode-options.class.php:251
+#: includes/settings/framework/fields/group/group.php:23
+msgid "Add New"
+msgstr ""
+
+#: includes/settings/framework/classes/shortcode-options.class.php:288
+#: includes/settings/framework/functions/actions.php:16
+#: includes/settings/framework/functions/actions.php:68
+#: includes/settings/framework/functions/actions.php:106
+#: includes/settings/framework/functions/actions.php:141
+#: includes/settings/framework/functions/actions.php:170
+msgid "Error: Invalid nonce verification."
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:36
+#: includes/settings/framework/fields/media/media.php:57
+msgid "Not selected"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:72
+#: includes/settings/framework/fields/date/date.php:31
+#: templates/timcheh/shortcodes.php:146
+msgid "From"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:90
+#: includes/settings/framework/fields/date/date.php:32
+msgid "To"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:108
+msgid "Direction"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:114
+msgid "Gradient Direction"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:115
+msgid "&#8659; top to bottom"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:116
+msgid "&#8658; left to right"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:117
+msgid "&#8664; corner top to right"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:118
+msgid "&#8665; corner top to left"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:161
+msgid "Background Position"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:162
+msgid "Left Top"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:163
+msgid "Left Center"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:164
+msgid "Left Bottom"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:165
+msgid "Center Top"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:166
+msgid "Center Center"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:167
+msgid "Center Bottom"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:168
+msgid "Right Top"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:169
+msgid "Right Center"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:170
+msgid "Right Bottom"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:184
+msgid "Background Repeat"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:185
+msgid "Repeat"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:186
+msgid "No Repeat"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:187
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:188
+msgid "Repeat Vertically"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:202
+msgid "Background Attachment"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:203
+msgid "Scroll"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:204
+msgid "Fixed"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:218
+msgid "Background Size"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:219
+msgid "Cover"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:220
+msgid "Contain"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:235
+msgid "Background Origin"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:236
+#: includes/settings/framework/fields/background/background.php:254
+msgid "Padding Box"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:237
+#: includes/settings/framework/fields/background/background.php:253
+msgid "Border Box"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:238
+#: includes/settings/framework/fields/background/background.php:255
+msgid "Content Box"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:252
+msgid "Background Clip"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:269
+msgid "Background Blend Mode"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:271
+msgid "Multiply"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:272
+msgid "Screen"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:273
+msgid "Overlay"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:274
+msgid "Darken"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:275
+msgid "Lighten"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:276
+msgid "Color Dodge"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:277
+msgid "Saturation"
+msgstr ""
+
+#: includes/settings/framework/fields/background/background.php:279
+msgid "Luminosity"
+msgstr ""
+
+#: includes/settings/framework/fields/backup/backup.php:26
+msgid "Import"
+msgstr ""
+
+#: includes/settings/framework/fields/backup/backup.php:29
+msgid "Export & Download"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:25
+#: includes/settings/framework/fields/spacing/spacing.php:25
+msgid "top"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:26
+#: includes/settings/framework/fields/spacing/spacing.php:26
+msgid "right"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:27
+#: includes/settings/framework/fields/spacing/spacing.php:27
+msgid "bottom"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:28
+#: includes/settings/framework/fields/spacing/spacing.php:28
+msgid "left"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:29
+#: includes/settings/framework/fields/spacing/spacing.php:29
+msgid "all"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:55
+msgid "Inset"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:56
+msgid "Outset"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:57
+msgid "Groove"
+msgstr ""
+
+#: includes/settings/framework/fields/border/border.php:58
+msgid "ridge"
+msgstr ""
+
+#: includes/settings/framework/fields/dimensions/dimensions.php:22
+msgid "width"
+msgstr ""
+
+#: includes/settings/framework/fields/dimensions/dimensions.php:23
+msgid "height"
+msgstr ""
+
+#: includes/settings/framework/fields/gallery/gallery.php:20
+msgid "Add Gallery"
+msgstr ""
+
+#: includes/settings/framework/fields/gallery/gallery.php:21
+msgid "Edit Gallery"
+msgstr ""
+
+#: includes/settings/framework/fields/gallery/gallery.php:22
+#: woocommerce/single-product/add-to-cart/variable.php:50
+msgid "Clear"
+msgstr ""
+
+#: includes/settings/framework/fields/group/group.php:35
+#: includes/settings/framework/fields/repeater/repeater.php:27
+msgid "Error: Field ID conflict."
+msgstr ""
+
+#: includes/settings/framework/fields/group/group.php:46
+#: includes/settings/framework/fields/group/group.php:87
+#: includes/settings/framework/fields/repeater/repeater.php:48
+#: includes/settings/framework/fields/repeater/repeater.php:76
+msgid "Are you sure to delete this item?"
+msgstr ""
+
+#: includes/settings/framework/fields/group/group.php:121
+#: includes/settings/framework/fields/repeater/repeater.php:89
+msgid "You cannot add more."
+msgstr ""
+
+#: includes/settings/framework/fields/group/group.php:122
+#: includes/settings/framework/fields/repeater/repeater.php:90
+msgid "You cannot remove more."
+msgstr ""
+
+#: includes/settings/framework/fields/icon/icon.php:20
+#: includes/settings/framework/fields/icon/icon.php:53
+msgid "Add Icon"
+msgstr ""
+
+#: includes/settings/framework/fields/icon/icon.php:21
+msgid "Remove Icon"
+msgstr ""
+
+#: includes/settings/framework/fields/link/link.php:20
+msgid "Add Link"
+msgstr ""
+
+#: includes/settings/framework/fields/link/link.php:21
+msgid "Edit Link"
+msgstr ""
+
+#: includes/settings/framework/fields/link/link.php:22
+msgid "Remove Link"
+msgstr ""
+
+#: includes/settings/framework/fields/link_color/link_color.php:39
+msgid "Visited"
+msgstr ""
+
+#: includes/settings/framework/fields/map/map.php:24
+msgid "Latitude"
+msgstr ""
+
+#: includes/settings/framework/fields/map/map.php:25
+msgid "Longitude"
+msgstr ""
+
+#: includes/settings/framework/fields/sorter/sorter.php:21
+msgid "Enabled"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:96
+msgid "Font Family"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:97
+msgid "Select a font"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:105
+msgid "Backup Font Family"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:130
+msgid "Font Style"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:144
+#: includes/settings/framework/fields/typography/typography.php:145
+msgid "Load Extra Styles"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:158
+msgid "Subset"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:168
+msgid "Text Align"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:170
+msgid "Inherit"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:174
+msgid "Justify"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:175
+msgid "Initial"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:184
+msgid "Font Variant"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:187
+msgid "Small Caps"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:188
+msgid "All Small Caps"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:197
+msgid "Text Transform"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:200
+msgid "Capitalize"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:201
+msgid "Uppercase"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:202
+msgid "Lowercase"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:211
+msgid "Text Decoration"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:218
+msgid "Wavy"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:219
+msgid "Overline"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:220
+msgid "Line-through"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:245
+msgid "Line Height"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:257
+msgid "Letter Spacing"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:269
+msgid "Word Spacing"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:284
+msgid "Font Color"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:295
+msgid "Custom Style"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:363
+msgid "Custom Web Fonts"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:369
+msgid "Safe Web Fonts"
+msgstr ""
+
+#: includes/settings/framework/fields/typography/typography.php:389
+msgid "Google Web Fonts"
+msgstr ""
+
+#: includes/settings/framework/functions/actions.php:72
+#: includes/settings/framework/functions/actions.php:110
+msgid "Error: Invalid key."
+msgstr ""
+
+#: includes/settings/framework/functions/actions.php:114
+msgid "Error: The response is not a valid JSON response."
+msgstr ""
+
+#: includes/settings/framework/functions/actions.php:174
+msgid "Error: Invalid term ID."
+msgstr ""
+
+#: includes/settings/framework/functions/actions.php:180
+msgid "Error: You do not have permission to do that."
+msgstr ""
+
+#: includes/settings/framework/functions/validate.php:14
+#: includes/settings/framework/functions/validate.php:86
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/settings/framework/functions/validate.php:32
+#: includes/settings/framework/functions/validate.php:106
+msgid "Please enter a valid number."
+msgstr ""
+
+#: includes/settings/framework/functions/validate.php:50
+#: includes/settings/framework/functions/validate.php:126
+msgid "This field is required."
+msgstr ""
+
+#: includes/settings/framework/functions/validate.php:68
+#: includes/settings/framework/functions/validate.php:146
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: includes/settings/sections/single/page.php:14
+msgid "Page Settings"
+msgstr ""
+
+#: includes/settings/sections/single/page.php:22
+msgid "Sections"
+msgstr ""
+
+#: includes/settings/sections/single/page.php:27
+msgid "Show page title"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:14
+msgid "Product Settings"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:29
+#: includes/settings/sections/single/product.php:59
+#, php-format
+msgid "You can manage from this %s. "
+msgstr ""
+
+#: includes/settings/sections/single/product.php:30
+#: includes/settings/sections/single/product.php:60
+#: includes/settings/sections/woocommerce.php:135
+msgid "link"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:45
+#: includes/settings/sections/woocommerce.php:32
+#: includes/settings/sections/woocommerce.php:37
+msgid "Ribbons"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:76
+#: includes/settings/sections/woocommerce.php:146
+#: includes/settings/sections/woocommerce.php:151
+msgid "Messages"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:82
+msgid "Featured Attributes"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:88
+msgid "Attributes"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:103
+msgid "Value"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:118
+msgid "Default rate"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:128
+msgid "Delivery"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:134
+#: includes/settings/sections/woocommerce.php:389
+#: woocommerce/checkout/delivery-times.php:18
+msgid "Delivery time"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:146
+msgid "Advanced Contents"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:153
+msgid "Categorized contents"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:177
+msgid "Product videos"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:183
+msgid "Videos"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:193
+msgid "File"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:202
+#: includes/settings/sections/single/product.php:208
+msgid "Features ratings"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:218
+msgid "Rate"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:232
+#: includes/settings/sections/single/product.php:238
+msgid "Positive points"
+msgstr ""
+
+#: includes/settings/sections/single/product.php:251
+#: includes/settings/sections/single/product.php:257
+msgid "Negative points"
+msgstr ""
+
+#: includes/settings/sections/theme.php:16
+#: includes/settings/sections/theme.php:17
+msgid "Theme Settings"
+msgstr ""
+
+#: includes/settings/sections/theme.php:33
+#: includes/settings/sections/woocommerce.php:267
+#: includes/settings/sections/woocommerce.php:275
+msgid "Archive"
+msgstr ""
+
+#: includes/settings/sections/theme.php:45
+msgid "Number of columns on a large monitor"
+msgstr ""
+
+#: includes/settings/sections/theme.php:57
+msgid "Number of columns on a normal monitor"
+msgstr ""
+
+#: includes/settings/sections/theme.php:68
+msgid "Number of columns on a small monitor"
+msgstr ""
+
+#: includes/settings/sections/theme.php:79
+#: includes/settings/sections/woocommerce.php:299
+msgid "Number of columns on the tablet"
+msgstr ""
+
+#: includes/settings/sections/theme.php:90
+#: includes/settings/sections/woocommerce.php:309
+msgid "Number of columns in mobile"
+msgstr ""
+
+#: includes/settings/sections/theme.php:114
+msgid "Single"
+msgstr ""
+
+#: includes/settings/sections/theme.php:132
+msgid "Styles"
+msgstr ""
+
+#: includes/settings/sections/theme.php:150
+msgid "Sizes"
+msgstr ""
+
+#: includes/settings/sections/theme.php:155
+msgid "Container Size"
+msgstr ""
+
+#: includes/settings/sections/theme.php:171
+msgid "Primary color"
+msgstr ""
+
+#: includes/settings/sections/theme.php:177
+msgid "Darken primary color"
+msgstr ""
+
+#: includes/settings/sections/theme.php:183
+msgid "Secondary color"
+msgstr ""
+
+#: includes/settings/sections/theme.php:189
+msgid "Darken secondary color"
+msgstr ""
+
+#: includes/settings/sections/theme.php:202
+msgid "Font family"
+msgstr ""
+
+#: includes/settings/sections/theme.php:204
+msgid "Upload custom font"
+msgstr ""
+
+#: includes/settings/sections/theme.php:211
+msgid "Font ttf file"
+msgstr ""
+
+#: includes/settings/sections/theme.php:217
+msgid "Font woff file"
+msgstr ""
+
+#: includes/settings/sections/theme.php:223
+msgid "Font woff2 file"
+msgstr ""
+
+#: includes/settings/sections/theme.php:229
+msgid "Font svg file"
+msgstr ""
+
+#: includes/settings/sections/theme.php:235
+msgid "Font eot file"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:16
+#: includes/settings/sections/woocommerce.php:17
+msgid "Shop Settings"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:58
+#: includes/settings/sections/woocommerce.php:182
+msgid "Rule"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:60
+#: includes/settings/sections/woocommerce.php:184
+msgid "All Products"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:61
+#: includes/settings/sections/woocommerce.php:185
+msgid "In Stock"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:62
+#: includes/settings/sections/woocommerce.php:186
+msgid "Out of Stock"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:63
+#: includes/settings/sections/woocommerce.php:187
+msgid "On Back Order"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:70
+#: includes/settings/sections/woocommerce.php:194
+msgid "Active as default"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:76
+msgid "Hide in archive"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:82
+msgid "Hide in product single"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:94
+msgid "Product service"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:99
+msgid "Product service plan type"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:111
+msgid "Service"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:123
+msgid "Select a photo"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:129
+msgid "More details"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:130
+msgid "Write more details"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:172
+msgid "Text color"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:177
+msgid "Background color"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:209
+msgid "Product Gallery Zoom"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:221
+msgid "Comment attachments"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:227
+msgid "Comment rate points"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:233
+msgid "Comment likes"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:239
+msgid "Comment as unknown"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:245
+msgid "Post Comment Title"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:251
+msgid "Description Post a comment"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:280
+msgid "Ajax filters"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:287
+msgid "Cards"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:292
+msgid "Card style"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:319
+msgid "Adjust the photo distance"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:321
+msgid "with Space"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:322
+msgid "No space"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:343
+#: woocommerce/cart/cart-steps.php:29
+msgid "Checkout"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:349
+msgid "Global"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:354
+msgid "Show purchase steps"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:361
+#: includes/settings/sections/woocommerce.php:379
+msgid "Map"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:366
+msgid "Show checkout map"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:372
+msgid "Address"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:380
+msgid "Map default location"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:394
+msgid "Show delivery times"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:400
+msgid "Delivery dates"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:403
+msgid "Select an option"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:405
+msgid "Saturday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:406
+msgid "Sunday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:407
+msgid "Monday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:408
+msgid "Tuesday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:409
+msgid "Wednesday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:410
+msgid "Thursday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:411
+msgid "Friday"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:419
+msgid "Minimum delivery time"
+msgstr ""
+
+#: includes/settings/sections/woocommerce.php:429
+msgid "Delivery time suggestions count"
+msgstr ""
+
+#: searchform.php:18
+msgid "Search &hellip;"
+msgstr ""
+
+#: templates/content-archive.php:85
+msgid "Search:"
+msgstr ""
+
+#. translators: %s: Number of search results.
+#: templates/content-archive.php:89
+#, php-format
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/content-archive.php:93
+msgid ""
+"We could not find any results for your search. You can give it another try "
+"through the search form below."
+msgstr ""
+
+#: templates/content-archive.php:97
+msgid "Nothing Found"
+msgstr ""
+
+#: templates/content-archive.php:134
+msgid "Blog cards style not set!"
+msgstr ""
+
+#: templates/content-archive.php:143
+msgid "search again"
+msgstr ""
+
+#: templates/globals/fragments/add-to-cart/widget-one-cart-content.php:28
+msgid "Commodity added"
+msgstr ""
+
+#: templates/globals/fragments/add-to-cart/widget-one-cart-content.php:72
+#: woocommerce/cart/cart.php:58
+msgid "Remove this item"
+msgstr ""
+
+#: templates/globals/fragments/add-to-cart/widget-one-cart-content.php:84
+msgid "Payable"
+msgstr ""
+
+#: templates/globals/fragments/add-to-cart/widget-one-cart-content.php:100
+msgid "No products in the cart."
+msgstr ""
+
+#: templates/globals/loop/pagination.php:19
+#: templates/shortcodes/grid_product/index.php:52
+#: woocommerce/loop/pagination.php:42 woocommerce/myaccount/orders.php:145
+msgid "Next"
+msgstr ""
+
+#: templates/globals/slices/quick-view.php:60
+msgid "View product"
+msgstr ""
+
+#: templates/globals/slices/sale-timer.php:22
+#: templates/shortcodes/product_addtocart/design-1/index.php:143
+#: templates/shortcodes/product_timer/Design_1/index.php:30
+#: templates/shortcodes/product_timer/index.php:35
+#: woocommerce/content-single-product.php:63
+msgid "Amazing sale not started yet!"
+msgstr ""
+
+#: templates/globals/slices/sale-timer.php:28
+#: templates/shortcodes/product_addtocart/design-1/index.php:149
+#: templates/shortcodes/product_timer/index.php:41
+#: woocommerce/content-single-product.php:69
+msgid "Day"
+msgstr ""
+
+#: templates/globals/slices/sale-timer.php:34
+#: templates/shortcodes/product_addtocart/design-1/index.php:155
+#: templates/shortcodes/product_timer/index.php:47
+#: woocommerce/content-single-product.php:75
+msgid "Hour"
+msgstr ""
+
+#: templates/globals/slices/sale-timer.php:41
+#: templates/shortcodes/product_addtocart/design-1/index.php:161
+#: templates/shortcodes/product_timer/index.php:53
+#: woocommerce/content-single-product.php:81
+msgid "Minute"
+msgstr ""
+
+#: templates/globals/slices/sale-timer.php:48
+#: templates/shortcodes/product_addtocart/design-1/index.php:167
+#: templates/shortcodes/product_timer/index.php:59
+#: woocommerce/content-single-product.php:87
+msgid "Second"
+msgstr ""
+
+#: templates/shortcodes/account/classic/index.php:59
+msgid "Login | register"
+msgstr ""
+
+#: templates/shortcodes/blog_carousel/design-1/index.php:47
+#: templates/shortcodes/product_carousel/design1/index.php:49
+msgid "View All"
+msgstr ""
+
+#: templates/shortcodes/blog_posts/index.php:55
+#: templates/shortcodes/grid_product/index.php:60
+msgid "Load more ..."
+msgstr ""
+
+#: templates/shortcodes/product_additional_information/index.php:25
+#: woocommerce/checkout/form-shipping.php:57
+#: woocommerce/single-product/tabs/additional-information.php:22
+msgid "Additional information"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:28
+#: templates/shortcodes/product_addtocart/design-1/index.php:36
+#: templates/shortcodes/product_addtocart/design-3/index.php:28
+#: templates/shortcodes/product_addtocart/design-3/index.php:36
+#: woocommerce/content-single-product.php:236
+#: woocommerce/content-single-product.php:245
+msgid "interest"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:43
+#: templates/shortcodes/product_addtocart/design-3/index.php:43
+#: woocommerce/content-single-product.php:252
+msgid "To add a product to favorites, first log in to the site."
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:58
+#: templates/shortcodes/product_addtocart/design-3/index.php:58
+#: woocommerce/content-single-product.php:267
+msgid "change"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:67
+#: templates/shortcodes/product_addtocart/design-3/index.php:67
+#: woocommerce/content-single-product.php:276
+msgid "Price chart"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:77
+#: templates/shortcodes/product_addtocart/design-1/index.php:85
+#: templates/shortcodes/product_addtocart/design-3/index.php:77
+#: templates/shortcodes/product_addtocart/design-3/index.php:85
+#: woocommerce/content-single-product.php:285
+#: woocommerce/content-single-product.php:292
+msgid "send"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:90
+#: templates/shortcodes/product_addtocart/design-3/index.php:90
+#: woocommerce/content-single-product.php:297
+msgid ""
+"You can share this page with your friends using the following methods."
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:103
+#: templates/shortcodes/product_addtocart/design-3/index.php:103
+#: woocommerce/content-single-product.php:310
+msgid "Subscribe to Twitter"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:106
+#: templates/shortcodes/product_addtocart/design-3/index.php:106
+#: woocommerce/content-single-product.php:313
+msgid "Subscribe to Facebook"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:109
+#: templates/shortcodes/product_addtocart/design-3/index.php:109
+#: woocommerce/content-single-product.php:316
+msgid "Subscribe to WhatsApp"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:112
+#: templates/shortcodes/product_addtocart/design-3/index.php:112
+#: woocommerce/content-single-product.php:319
+msgid "SMS subscription"
+msgstr ""
+
+#: templates/shortcodes/product_addtocart/design-1/index.php:114
+#: templates/shortcodes/product_addtocart/design-3/index.php:114
+#: woocommerce/content-single-product.php:321
+msgid "Subscribe to Telegram"
+msgstr ""
+
+#: templates/shortcodes/product_gallery/design-1/index.php:70
+#: templates/shortcodes/product_gallery/design-1/index.php:114
+#: templates/shortcodes/product_gallery/design-2/index.php:69
+#: templates/shortcodes/product_gallery/design-2/index.php:111
+#: templates/shortcodes/product_gallery/design-3/index.php:69
+#: templates/shortcodes/product_gallery/design-3/index.php:102
+#: templates/shortcodes/product_gallery/index.php:68
+#: templates/shortcodes/product_gallery/index.php:112
+#: woocommerce/single-product/product-image.php:54
+#: woocommerce/single-product/product-image.php:84
+msgid "Awaiting product image"
+msgstr ""
+
+#: templates/shortcodes/product_related/index.php:51
+#: woocommerce/single-product/related.php:27
+msgid "Related products"
+msgstr ""
+
+#: templates/shortcodes/product_share/index.php:29
+msgid "Copy to clipboard"
+msgstr ""
+
+#: templates/shortcodes/product_share/index.php:42
+msgid "Share on "
+msgstr ""
+
+#: templates/shortcodes/product_upsell/index.php:51
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: templates/shortcodes/sale_slider/design-1/index.php:61
+msgid "see all"
+msgstr ""
+
+#: templates/shortcodes/search/index.php:47
+msgid "All Categories"
+msgstr ""
+
+#: templates/single/comment-item.php:28
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: templates/single/comment-item.php:30
+msgid ""
+"Your comment is awaiting moderation. This is a preview, your comment will "
+"be visible after it has been approved."
+msgstr ""
+
+#: templates/single/comment-item.php:69
+msgid "Edit"
+msgstr ""
+
+#: templates/single/content.php:41
+msgid "Tags"
+msgstr ""
+
+#: templates/single/content.php:51
+msgid "Pages:"
+msgstr ""
+
+#: templates/single/entry-author-bio.php:26 templates/single/post-meta.php:31
+#: templates/timcheh/shortcodes.php:324
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: templates/single/entry-author-bio.php:32
+msgid "View Archive <span aria-hidden=\"true\">&rarr;</span>"
+msgstr ""
+
+#: templates/single/post-meta.php:26 templates/timcheh/shortcodes.php:319
+msgid "Post author"
+msgstr ""
+
+#: templates/single/post-meta.php:39 templates/timcheh/shortcodes.php:332
+msgid "Post date"
+msgstr ""
+
+#: templates/single/post-meta.php:49 templates/timcheh/shortcodes.php:342
+msgid "Categories"
+msgstr ""
+
+#: templates/single/post-meta.php:71 templates/timcheh/shortcodes.php:364
+msgid "Sticky post"
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:44 templates/timcheh/shortcodes.php:152
+msgid "Store is Open"
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:44 templates/timcheh/shortcodes.php:152
+msgid "Open"
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:46 templates/timcheh/shortcodes.php:154
+msgid "Store is Closed"
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:46 templates/timcheh/shortcodes.php:154
+msgid "Closed"
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:140
+msgid " Seller: "
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:146
+msgid "Function :"
+msgstr ""
+
+#: templates/timcheh/shortcodes.php:387
+msgid "qr code"
+msgstr ""
+
+#: templates/timcheh/woocommerce.php:14
+#: woocommerce/single-product/add-to-cart/simple.php:46
+msgid "Last price update:"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:52
+#, php-format
+msgid "Shipping to %s."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:53
+msgid "Change address"
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:55
+msgid "Shipping options will be updated during checkout."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:63
+msgid "Shipping costs are calculated during checkout."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:65
+msgid "Enter your address to view shipping options."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:68
+msgid ""
+"There are no shipping options available. Please ensure that your address "
+"has been entered correctly, or contact us if you need any help."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:71
+#, php-format
+msgid "No shipping options were found for %s."
+msgstr ""
+
+#: woocommerce/cart/cart-shipping.php:72
+msgid "Enter a different address"
+msgstr ""
+
+#: woocommerce/cart/cart-steps.php:36
+msgid "Payment"
+msgstr ""
+
+#: woocommerce/cart/cart-steps.php:43
+msgid "Thank you"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:26
+msgid "Cart totals"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:31 woocommerce/cart/cart-totals.php:32
+#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:128
+#: woocommerce/checkout/review-order.php:24
+#: woocommerce/checkout/review-order.php:64
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:53 woocommerce/cart/cart-totals.php:54
+msgid "Shipping"
+msgstr ""
+
+#. translators: %s location.
+#: woocommerce/cart/cart-totals.php:73
+#, php-format
+msgid "(estimated for %s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:99 woocommerce/cart/cart-totals.php:100
+#: woocommerce/checkout/review-order.php:111
+#: woocommerce/myaccount/my-orders.php:17
+#: woocommerce/order/order-details.php:53
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:94
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/cart/cart.php:147 woocommerce/checkout/form-coupon.php:34
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:148 woocommerce/checkout/form-coupon.php:36
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:154 woocommerce/cart/cart.php:156
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:24
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: woocommerce/cart/proceed-to-checkout-button.php:26
+msgid "Proceed to checkout"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:24
+msgid "Calculate shipping"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:32
+msgid "Select a country / region&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:51
+#: woocommerce/cart/shipping-calculator.php:56
+#: woocommerce/cart/shipping-calculator.php:69
+msgid "State / County"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:57
+msgid "Select an option&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:78
+msgid "City"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:84
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:88
+msgid "Update"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:24
+msgid "Billing &amp; Shipping"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:26
+msgid "Billing details"
+msgstr ""
+
+#: woocommerce/checkout/form-billing.php:51
+msgid "Create an account?"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:54
+msgid "Your order"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "Have a coupon?"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:27
+msgid "Click here to enter your code"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:31
+msgid "If you have a coupon code, please apply it below."
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:26
+msgid "Returning customer?"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:27
+msgid "Click here to login"
+msgstr ""
+
+#: woocommerce/checkout/form-login.php:34
+msgid ""
+"If you have shopped with us before, please enter your details below. If "
+"you are a new customer, please proceed to the Billing section."
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:28
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:29
+msgid "Totals"
+msgstr ""
+
+#: woocommerce/checkout/form-pay.php:81
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/form-shipping.php:26
+msgid "Ship to a different address?"
+msgstr ""
+
+#: woocommerce/checkout/order-receipt.php:27
+#: woocommerce/checkout/thankyou.php:77
+msgid "Order number:"
+msgstr ""
+
+#: woocommerce/checkout/order-receipt.php:31
+#: woocommerce/checkout/thankyou.php:82
+msgid "Date:"
+msgstr ""
+
+#: woocommerce/checkout/order-receipt.php:35
+#: woocommerce/checkout/thankyou.php:94
+msgid "Total:"
+msgstr ""
+
+#: woocommerce/checkout/order-receipt.php:40
+#: woocommerce/checkout/thankyou.php:100
+msgid "Payment method:"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:29
+msgid "Payment methods"
+msgstr ""
+
+#: woocommerce/checkout/payment.php:39
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"state. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:39
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+#. translators: $1 and $2 opening and closing emphasis tags respectively
+#: woocommerce/checkout/payment.php:48
+#, php-format
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+
+#: woocommerce/checkout/payment.php:50
+msgid "Update totals"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:30
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:35
+msgid "Pay"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:38
+msgid "My account"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:66 woocommerce/checkout/thankyou.php:115
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:88
+msgid "Email:"
+msgstr ""
+
+#: woocommerce/global/form-login.php:35
+msgid "Username or email"
+msgstr ""
+
+#: woocommerce/global/form-login.php:39
+#: woocommerce/myaccount/form-login.php:47
+#: woocommerce/myaccount/form-login.php:97
+msgid "Password"
+msgstr ""
+
+#: woocommerce/global/form-login.php:49
+#: woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/global/form-login.php:53
+#: woocommerce/myaccount/form-login.php:36
+msgid "Login"
+msgstr ""
+
+#: woocommerce/global/form-login.php:56
+#: woocommerce/myaccount/form-login.php:53
+msgid "Lost your password?"
+msgstr ""
+
+#. translators: %s: Quantity.
+#: woocommerce/global/quantity-input.php:28
+#, php-format
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:42
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: woocommerce/loop/result-count.php:30
+msgid "Showing the single result"
+msgstr ""
+
+#. translators: %d: total results
+#: woocommerce/loop/result-count.php:33
+#, php-format
+msgid "Showing all %d result"
+msgid_plural "Showing all %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: first result 2: last result 3: total results
+#: woocommerce/loop/result-count.php:38
+#, php-format
+msgctxt "with first and last result"
+msgid "Showing %1$d&ndash;%2$d of %3$d result"
+msgid_plural "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: user display name 2: logout url
+#: woocommerce/myaccount/dashboard.php:33
+#, php-format
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:43
+#: woocommerce/myaccount/dashboard.php:74
+msgid "Full name"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:47
+#: woocommerce/myaccount/dashboard.php:78
+#: woocommerce/single-product-reviews.php:120
+msgid "Email"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:53
+#: woocommerce/myaccount/dashboard.php:82
+msgid "Phone number"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:60
+#: woocommerce/myaccount/dashboard.php:89
+msgid "Mobile number not entered."
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:65
+#: woocommerce/myaccount/dashboard.php:94
+msgid "Join date"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:102
+msgid "edit your account details"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:43
+msgid "Username or email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:61
+msgid "Log in"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:74
+#: woocommerce/myaccount/form-login.php:111
+msgid "Register"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:83
+msgid "Username"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:90
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:103
+msgid "A password will be sent to your email address."
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Status"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:37
+msgid "Recent orders"
+msgstr ""
+
+#: woocommerce/myaccount/my-orders.php:63
+#: woocommerce/myaccount/my-orders.php:111
+#: woocommerce/myaccount/orders.php:49 woocommerce/myaccount/orders.php:102
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#. translators: 1: formatted order total 2: total order items
+#: woocommerce/myaccount/my-orders.php:75
+#: woocommerce/myaccount/my-orders.php:123
+#: woocommerce/myaccount/orders.php:61 woocommerce/myaccount/orders.php:114
+#, php-format
+msgid "%1$s for %2$s item"
+msgid_plural "%1$s for %2$s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/myaccount/navigation.php:41
+msgid "ago"
+msgstr ""
+
+#: woocommerce/myaccount/navigation.php:69
+msgid "Seller panel"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:141
+msgid "Previous"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:152
+msgid "Browse products"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:153
+msgid "No order has been made yet."
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:31
+msgid "Billing address"
+msgstr ""
+
+#: woocommerce/order/order-details-customer.php:60
+msgid "Shipping address"
+msgstr ""
+
+#: woocommerce/order/order-details.php:45
+msgid "Order details"
+msgstr ""
+
+#: woocommerce/order/order-details.php:94
+msgid "Note:"
+msgstr ""
+
+#: woocommerce/product-searchform.php:24
+msgid "Search for:"
+msgstr ""
+
+#: woocommerce/product-searchform.php:25
+msgid "Search products&hellip;"
+msgstr ""
+
+#: woocommerce/product-searchform.php:26
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:31
+msgid "You can also comment on this product."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:32
+msgid ""
+"To post a comment, click the Add New Comment button. If you buy this "
+"product, you will be registered as a buyer."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:76
+msgid "There are no reviews yet."
+msgstr ""
+
+#. translators: %s is product title
+#: woocommerce/single-product-reviews.php:100
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:100
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#. translators: %s is product title
+#: woocommerce/single-product-reviews.php:102
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:106
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:114
+msgid "Name"
+msgstr ""
+
+#. translators: %s opening and closing link tags respectively
+#: woocommerce/single-product-reviews.php:145
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:149
+msgid "Your rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:150
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:151
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:152
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:153
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:154
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:155
+msgid "Very poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:159
+msgid "Your review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:159
+msgid "Write the text of your comment ...."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:167
+msgid ""
+"Only logged in customers who have purchased this product may leave a "
+"review."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/simple.php:33
+#: woocommerce/single-product/add-to-cart/variation.php:20
+msgid "stock:"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:33
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variation.php:28
+msgid ""
+"Sorry, this product is unavailable. Please choose a different combination."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "timcheh"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://wizgraphic.ir/demo/timcheh/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "the woocommerce base template"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "the wizgraphic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wizgraphic.ir"
+msgstr ""

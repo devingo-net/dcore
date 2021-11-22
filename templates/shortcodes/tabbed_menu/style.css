@@ -1,0 +1,11 @@
+.tab-content-menus>.menu{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.tab-content-menus>.menu>li{
+    width: 25%;
+    height: auto
+}

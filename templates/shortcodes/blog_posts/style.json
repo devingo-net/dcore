@@ -1,0 +1,4 @@
+{
+  ".grid-content-area": "background: [buttons_color:20]",
+  ".uk-card-title": "background: [text_color:50]"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "dcore",
+  "version": "1.0.0",
+  "description": "shop templates base",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx mix watch",
+    "build": "npx mix --production",
+    "cache": "php sd cache"
+  },
+  "author": "devingo",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.11",
+    "sass-loader": "^8.0.2"
+  },
+  "dependencies": {
+    "filepond": "^4.27.0",
+    "filepond-plugin-file-validate-size": "^2.2.4",
+    "filepond-plugin-file-validate-type": "^1.2.6",
+    "jquery": "^3.6.0",
+    "jquery-filepond": "^1.0.0",
+    "lightgallery": "^1.10.0",
+    "swiper": "^6.5.8",
+    "uikit": "^3.6.20"
+  }
+}
