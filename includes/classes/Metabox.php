@@ -3,14 +3,18 @@
 /**
  *
  *
- * @category
+ * @category   Classes
  * @version    1.0.0
  * @since      1.0.0
  */
 
 namespace DCore;
 
-
+/**
+ * Class Metabox
+ *
+ * @package DCore
+ */
 class Metabox {
 	public static function addControl (string $id, array $args) : void {
 		$defaults = [
