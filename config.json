@@ -37,14 +37,5 @@
       "color": "[primary-color]"
     }
   },
-  "shortcodes": {
-    "Search": {
-      "widgetTitle": "جستجوی حرفه ای",
-      "fieldPlaceholder": "جستجو در بین محصولات..."
-    },
-    "Cart": {
-      "widgetTitle": "سبد خرید",
-      "text": "سبد خرید"
-    }
-  }
+  "shortcodes": {}
 }

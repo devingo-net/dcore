@@ -1,8 +1,8 @@
 <?php
 /**
+ * Cached configs
  *
- *
- * @category
+ * @category   Configs
  * @version    1.4.2
  * @since      1.4.2
  */
@@ -10,9 +10,9 @@
 namespace DCore;
 
 class Configs {
-    static array $configJSON = array (
-  'prefix' => 'dc',
-  'name' => 'DCore',
+    static $configJSON = array (
+  'prefix' => 'sd',
+  'name' => 'DevingoCore',
   'textdomain' => 'dcore',
   'colors' => 
   array (
@@ -57,19 +57,9 @@ class Configs {
   ),
   'shortcodes' => 
   array (
-    'Search' => 
-    array (
-      'widgetTitle' => 'جستجوی حرفه ای',
-      'fieldPlaceholder' => 'جستجو در بین محصولات...',
-    ),
-    'Cart' => 
-    array (
-      'widgetTitle' => 'سبد خرید',
-      'text' => 'سبد خرید',
-    ),
   ),
 );
-    static array $shortcodes = array (
+    static $shortcodes = array (
   'account' => 
   array (
     'templates' => 
@@ -134,18 +124,6 @@ class Configs {
       '.uk-card-title' => 'background: [text_color:50]',
     ),
   ),
-  'cart' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\cart\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/cart/style.css',
-  ),
   'categories' => 
   array (
     'templates' => 
@@ -170,23 +148,6 @@ class Configs {
     ),
     'js-file' => '/templates/shortcodes/custom_carousel/script.js',
   ),
-  'grid_product' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\grid_product\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/grid_product/style.css',
-    'js-file' => '/templates/shortcodes/grid_product/script.js',
-    'style' => 
-    array (
-      '.widget-pagination .page-numbers li .page-numbers.current' => 'background: [primaryColor]',
-    ),
-  ),
   'image_slider' => 
   array (
     'templates' => 
@@ -198,23 +159,6 @@ class Configs {
       ),
     ),
     'js-file' => '/templates/shortcodes/image_slider/script.js',
-  ),
-  'instant_offer' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\instant_offer\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/instant_offer/style.css',
-    'js-file' => '/templates/shortcodes/instant_offer/script.js',
-    'style' => 
-    array (
-      '.slider-timer span' => 'background-color: [primaryColor]',
-    ),
   ),
   'menu' => 
   array (
@@ -228,319 +172,6 @@ class Configs {
     ),
     'css-file' => '/templates/shortcodes/menu/style.css',
     'js-file' => '/templates/shortcodes/menu/script.js',
-  ),
-  'product_additional_information' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_additional_information\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_addtocart' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_addtocart\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_carousel' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_carousel\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/product_carousel/style.css',
-    'js-file' => '/templates/shortcodes/product_carousel/script.js',
-  ),
-  'product_content' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_content\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_data_tabs' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_data_tabs\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_delivery' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_delivery\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_featured_attributes' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_featured_attributes\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_gallery' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_gallery\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/product_gallery/style.css',
-    'js-file' => '/templates/shortcodes/product_gallery/script.js',
-  ),
-  'product_hooks' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_hooks\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_messages' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_messages\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_meta' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_meta\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_price' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_price\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_price_changes' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_price_changes\\',
-        'name' => 'default',
-      ),
-    ),
-    'js-file' => '/templates/shortcodes/product_price_changes/script.js',
-  ),
-  'product_rating' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_rating\\',
-        'name' => 'default',
-      ),
-    ),
-    'style' => 
-    array (
-      '.star-rating span' => 'color: [primaryColor]',
-      '.star-rating::before' => 'color: [secondaryColor]',
-    ),
-  ),
-  'product_related' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_related\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/product_related/style.css',
-    'js-file' => '/templates/shortcodes/product_related/script.js',
-  ),
-  'product_reviews' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_reviews\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_ribbons' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_ribbons\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_share' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_share\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_short_description' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_short_description\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_shortcodes' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_shortcodes\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_stock' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_stock\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_subtitle' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_subtitle\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_timer' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_timer\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_title' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_title\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'product_upsell' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_upsell\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/product_upsell/style.css',
-    'js-file' => '/templates/shortcodes/product_upsell/script.js',
-  ),
-  'product_videos' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\product_videos\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
-  'sale_slider' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\sale_slider\\',
-        'name' => 'default',
-      ),
-    ),
-    'css-file' => '/templates/shortcodes/sale_slider/style.css',
-    'js-file' => '/templates/shortcodes/sale_slider/script.js',
   ),
   'search' => 
   array (
@@ -560,22 +191,6 @@ class Configs {
     'css-file' => '/templates/shortcodes/search/style.css',
     'js-file' => '/templates/shortcodes/search/script.js',
   ),
-  'single_product' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\single_product\\',
-        'name' => 'default',
-      ),
-    ),
-    'style' => 
-    array (
-      '.uk-link' => 'color: [primaryColor]',
-      'a' => 'color: [primaryColor]',
-    ),
-  ),
   'tabbed_menu' => 
   array (
     'templates' => 
@@ -588,23 +203,8 @@ class Configs {
     ),
     'css-file' => '/templates/shortcodes/tabbed_menu/style.css',
   ),
-  'woocommerce_notices' => 
-  array (
-    'templates' => 
-    array (
-      'default' => 
-      array (
-        'dir' => '\\templates\\shortcodes\\woocommerce_notices\\',
-        'name' => 'default',
-      ),
-    ),
-  ),
 );
-    static array $globalCards = array (
-  'amazing-product' => 
-  array (
-    'minimal.php' => 'Minimal design',
-  ),
+    static $globalCards = array (
   'blog-carousel' => 
   array (
     'minimal.php' => 'Minimal design',
@@ -621,22 +221,8 @@ class Configs {
   array (
     'minimal.php' => 'Minimal design',
   ),
-  'instant-offer' => 
-  array (
-    'minimal.php' => 'Minimal design',
-  ),
-  'product' => 
-  array (
-    'list.php' => 'List design',
-    'minimal.php' => 'Minimal design',
-  ),
-  'single-product' => 
-  array (
-    'list.php' => 'List design',
-    'minimal.php' => 'Minimal design',
-  ),
 );
-    static array $fonts = array (
+    static $fonts = array (
   'IRANSans_Fa' => 
   array (
     'name' => 'ایران سانس',
