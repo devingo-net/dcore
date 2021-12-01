@@ -8,8 +8,6 @@
  * @since       1.0.0
  */
 
-use DCore\Theme;
-
 /**
  * After Setup Theme
  */
@@ -94,74 +92,6 @@ function dcBodyClasses ($classes) {
 	return $classes;
 }
 
-function themeOptionFontIcons ($icons) {
-
-	$duoToneList          = Theme::getJsonFileArray(THEME_ASSETS_SCRIPT_URI . 'lib/font-awesome-pro/duotone.js');
-	$duoToneList['icons'] = $duoToneList['icons'] ?? [];
-	if ( !empty($duoToneList['icons']) ) {
-		foreach ( $duoToneList['icons'] as $key => $val ) {
-			$duoToneList['icons'][$key] = 'fad fa-' . $val;
-		}
-
-	}
-
-	$brandsList          = Theme::getJsonFileArray(THEME_ASSETS_SCRIPT_URI . 'lib/font-awesome-pro/brands.js');
-	$brandsList['icons'] = $brandsList['icons'] ?? [];
-	if ( !empty($brandsList['icons']) ) {
-		foreach ( $brandsList['icons'] as $key => $val ) {
-			$brandsList['icons'][$key] = 'fab fa-' . $val;
-		}
-
-	}
-
-	$lightList          = Theme::getJsonFileArray(THEME_ASSETS_SCRIPT_URI . 'lib/font-awesome-pro/light.js');
-	$lightList['icons'] = $lightList['icons'] ?? [];
-	if ( !empty($lightList['icons']) ) {
-		foreach ( $lightList['icons'] as $key => $val ) {
-			$lightList['icons'][$key] = 'fal fa-' . $val;
-		}
-
-	}
-
-	$regularList          = Theme::getJsonFileArray(THEME_ASSETS_SCRIPT_URI . 'lib/font-awesome-pro/regular.js');
-	$regularList['icons'] = $regularList['icons'] ?? [];
-	if ( !empty($regularList['icons']) ) {
-		foreach ( $regularList['icons'] as $key => $val ) {
-			$regularList['icons'][$key] = 'far fa-' . $val;
-		}
-
-	}
-
-	$solidList          = Theme::getJsonFileArray(THEME_ASSETS_SCRIPT_URI . 'lib/font-awesome-pro/regular.js');
-	$solidList['icons'] = $solidList['icons'] ?? [];
-	if ( !empty($solidList['icons']) ) {
-		foreach ( $solidList['icons'] as $key => $val ) {
-			$solidList['icons'][$key] = 'fas fa-' . $val;
-		}
-
-	}
-
-	return [
-		[
-			'title' => __('DouTone icons', THEME_TEXTDOMAIN),
-			'icons' => $duoToneList['icons']
-		],
-		[
-			'title' => __('Brands icons', THEME_TEXTDOMAIN),
-			'icons' => $brandsList['icons']
-		],
-		[
-			'title' => __('Regular icons', THEME_TEXTDOMAIN),
-			'icons' => $regularList['icons']
-		],
-		[
-			'title' => __('Solid icons', THEME_TEXTDOMAIN),
-			'icons' => $solidList['icons']
-		]
-	];
-
-}
-
 function dcEnableExtendedUpload ($mime_types = []) {
 	$mime_types['obj'] = 'text/plain';
 	$mime_types['mtl'] = 'text/plain';
@@ -199,6 +129,5 @@ function dcFixCheckFiletypeAndExt ($data, $file, $filename, $mimes) {
 add_action('after_setup_theme', 'dcAfterSetupTheme');
 add_action('widgets_init', 'dcSidebarWidgetsInit');
 add_filter('body_class', 'dcBodyClasses');
-add_filter('csf_field_icon_add_icons', 'themeOptionFontIcons');
 add_filter('upload_mimes', 'dcEnableExtendedUpload');
 add_filter('wp_check_filetype_and_ext', 'dcFixCheckFiletypeAndExt', 10, 4);

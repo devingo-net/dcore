@@ -21,8 +21,6 @@ use DCore\Configs;
 use DCore\Elementor;
 use DCore\Helper;
 use DCore\Theme;
-use DCore\Woocommerce\Current_Query_Renderer;
-use DCore\Woocommerce\Products_Renderer;
 
 /**
  * Class DC_Widget
@@ -1157,12 +1155,12 @@ class Widget extends Widget_Base {
 
 
 		$this->add_control('sliderScrollbar', [
-			'label'           => __('Slider Scroll Bar', THEME_TEXTDOMAIN),
-			'type'            => Controls_Manager::SWITCHER,
-			'label_on'        => __('True', THEME_TEXTDOMAIN),
-			'label_off'       => __('False', THEME_TEXTDOMAIN),
-			'return_value'    => 'true',
-			'default' => $defaults['sliderScrollbar'] ?? 'false'
+			'label'        => __('Slider Scroll Bar', THEME_TEXTDOMAIN),
+			'type'         => Controls_Manager::SWITCHER,
+			'label_on'     => __('True', THEME_TEXTDOMAIN),
+			'label_off'    => __('False', THEME_TEXTDOMAIN),
+			'return_value' => 'true',
+			'default'      => $defaults['sliderScrollbar'] ?? 'false'
 		]);
 		$this->end_controls_section();
 
@@ -1208,13 +1206,13 @@ class Widget extends Widget_Base {
 			$carouselSettings['slidesPerView'] = $settings['slidesPerView_mobile'] ?? $settings['slidesPerView'];
 
 			$carouselSettings['breakpoints'][0]['slidesPerView'] = $settings['slidesPerView_mobile'] ?? $settings['slidesPerView'];
-			$carouselSettings['breakpoints'][0]['spaceBetween'] = $settings['spaceBetween_mobile'] ?? $settings['spaceBetween'];
+			$carouselSettings['breakpoints'][0]['spaceBetween']  = $settings['spaceBetween_mobile'] ?? $settings['spaceBetween'];
 
 			$carouselSettings['breakpoints'][361]['slidesPerView'] = $settings['slidesPerView_tablet'] ?? $settings['slidesPerView'];
-			$carouselSettings['breakpoints'][361]['spaceBetween'] = $settings['spaceBetween_tablet'] ?? $settings['spaceBetween'];
+			$carouselSettings['breakpoints'][361]['spaceBetween']  = $settings['spaceBetween_tablet'] ?? $settings['spaceBetween'];
 
 			$carouselSettings['breakpoints'][769]['slidesPerView'] = $settings['slidesPerView'];
-			$carouselSettings['breakpoints'][769]['spaceBetween'] = $settings['spaceBetween'];
+			$carouselSettings['breakpoints'][769]['spaceBetween']  = $settings['spaceBetween'];
 
 			if ( $settings['slidesColumn'] === 'true' ) {
 				$carouselSettings['slidesPerColumn']                     = $settings['slidesPerColumn'];
@@ -1290,8 +1288,8 @@ class Widget extends Widget_Base {
 		}
 
 		$carouselSettings['navigation'] = [
-			'nextEl'        => '.slider-button-next',
-			'prevEl'        => '.slider-button-prev'
+			'nextEl' => '.slider-button-next',
+			'prevEl' => '.slider-button-prev'
 		];
 		if ( $settings['sliderNavs'] !== 'true' ) {
 			$carouselSettings['breakpoints'][769]['navigation'] = false;
@@ -1326,13 +1324,13 @@ class Widget extends Widget_Base {
 			$this->styles['{{WRAPPER}} .slider-scrollbar'] = 'display: none !important;';
 		}
 
-		if(empty($carouselSettings['breakpoints'][0])){
+		if ( empty($carouselSettings['breakpoints'][0]) ) {
 			unset($carouselSettings['breakpoints'][0]);
 		}
-		if(empty($carouselSettings['breakpoints'][361])){
+		if ( empty($carouselSettings['breakpoints'][361]) ) {
 			unset($carouselSettings['breakpoints'][361]);
 		}
-		if(empty($carouselSettings['breakpoints'][769])){
+		if ( empty($carouselSettings['breakpoints'][769]) ) {
 			unset($carouselSettings['breakpoints'][769]);
 		}
 
@@ -1376,13 +1374,20 @@ class Widget extends Widget_Base {
 	 * @return \DCore\Woocommerce\Current_Query_Renderer|\DCore\Woocommerce\Products_Renderer
 	 */
 	public static function get_shortcode_object ($settings) {
+		if ( !class_exists('DCore\Woocommerce\Current_Query_Renderer') ) {
+			return null;
+		}
 		if ( 'current_query' === $settings[Products_Renderer::QUERY_CONTROL_NAME . '_post_type'] ) {
 			$type = 'current_query';
 
-			return new Current_Query_Renderer($settings, $type);
+			return new DCore\Woocommerce\Current_Query_Renderer($settings, $type);
 		}
 		$type = 'products';
 
-		return new Products_Renderer($settings, $type);
+		if ( !class_exists('DCore\Woocommerce\Products_Renderer') ) {
+			return null;
+		}
+
+		return new DCore\Woocommerce\Products_Renderer($settings, $type);
 	}
 }

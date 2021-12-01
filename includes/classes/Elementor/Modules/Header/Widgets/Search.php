@@ -18,7 +18,7 @@ class Search extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name        = 'Search_Widget';
 		$this->title       = 'Search Widget';
-		$this->icon        = 'fad fa-search';
+		$this->icon        = 'fas fa-search';
 		$this->categories  = ['prefix::header'];
 		$this->jsTemplates = ['ajax-response.html'];
 

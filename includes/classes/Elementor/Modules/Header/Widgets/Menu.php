@@ -19,7 +19,7 @@ class Menu extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Menu_Widget';
 		$this->title      = 'Menu Widget';
-		$this->icon       = 'fad fa-list-ul';
+		$this->icon       = 'far fa-list-ul';
 		$this->categories = ['prefix::header'];
 
 		parent::__construct($data, $args);

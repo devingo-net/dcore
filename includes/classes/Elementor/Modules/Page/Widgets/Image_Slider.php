@@ -19,7 +19,7 @@ class Image_Slider extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Image_Slider_Widget';
 		$this->title      = 'Image Slider Widget';
-		$this->icon       = 'fad fa-images';
+		$this->icon       = 'far fa-images';
 		$this->categories = ['prefix::page'];
 		$this->cardStyle = 'image';
 

@@ -12,3 +12,7 @@ require_once __DIR__ . '/defines.php';
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/settings/init.php';
 require_once __DIR__ . '/hooks.php';
+
+if ( file_exists(__DIR__ . '/../addons/loader.php') ) {
+	require_once __DIR__ . '/../addons/loader.php';
+}

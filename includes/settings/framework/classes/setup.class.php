@@ -564,8 +564,6 @@ if ( !class_exists('CSF') ) {
 
 		// Add typography enqueue styles to front page
 		public static function add_typography_enqueue_styles () {
-
-            wp_enqueue_style( prefixStr('font-awesome-pro'), THEME_ASSETS_URI . 'font/fontawesome/css/all.css', [], defined('ELEMENTOR_PRO_VERSION') ? ELEMENTOR_PRO_VERSION : 1 );
 			if ( !empty(self::$webfonts) ) {
 
 				if ( !empty(self::$webfonts['enqueue']) ) {

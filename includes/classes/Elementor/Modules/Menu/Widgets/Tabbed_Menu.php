@@ -19,7 +19,7 @@ class Tabbed_Menu extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Tabbed_Menu_Widget';
 		$this->title      = 'Tabbed Menu Widget';
-		$this->icon       = 'fad fa-user';
+		$this->icon       = 'far fa-user';
 		$this->categories = ['prefix::menu'];
 
 		parent::__construct($data, $args);
@@ -82,7 +82,7 @@ class Tabbed_Menu extends Widget {
 			'label'   => __('Icon', THEME_TEXTDOMAIN),
 			'type'    => Controls_Manager::ICONS,
 			'default' => [
-				'value'   => 'far fa-bars',
+				'value'   => 'fas fa-bars',
 				'library' => 'regular',
 			]
 		]);

@@ -1,8 +1,4 @@
 {
   "version": "v0.1",
-  "addons": {
-    "devingo-shop": {
-      "version": "v1.0"
-    }
-  }
+  "addons": {}
 }

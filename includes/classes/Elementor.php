@@ -10,8 +10,6 @@
 
 namespace DCore;
 
-use DCore\Elementor\Modules\Assets\Icons\Font_Awesome_Pro;
-
 class Elementor {
 
 	/**
@@ -32,6 +30,8 @@ class Elementor {
 		$elementorManager->add_category(THEME_PREFIX . '_product_single', [
 			'title' => __('Product Single widgets', THEME_TEXTDOMAIN),
 		]);
+
+		do_action('dc_manage_elementor_widget_categories', $elementorManager);
 	}
 
 	/**
@@ -59,6 +59,8 @@ class Elementor {
 			'hook'         => 'dCoreArchive',
 			'remove_hooks' => ['dCoreArchivePrint'],
 		]);
+
+		do_action('dc_manage_elementor_locations', $elementorThemeManager);
 	}
 
 	/**
@@ -70,7 +72,7 @@ class Elementor {
 		if ( empty($widgetConfigs) ) {
 			$widgetConfigs = Configs::$shortcodes;
 		}
-		if($widgetConfigs === false){
+		if ( $widgetConfigs === false ) {
 			return [];
 		}
 
@@ -90,13 +92,4 @@ class Elementor {
 
 		return $stylesList;
 	}
-
-	/**
-	 * @param \ElementorPro\Modules\AssetsManager\AssetTypes\Icons_Manager $icons_manager
-	 */
-	public static function registerIcons ($icons_manager) : void {
-		update_option('elementor_font_awesome_pro_kit_id', '');
-		$icons_manager->add_icon_type(prefixStr('font-awesome-pro'), new Font_Awesome_Pro());
-	}
-
 }

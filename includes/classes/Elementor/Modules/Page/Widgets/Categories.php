@@ -26,7 +26,7 @@ class Categories extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Categories_Widget';
 		$this->title      = 'Categories Widget';
-		$this->icon       = 'fad fa-folders';
+		$this->icon       = 'fas fa-folder';
 		$this->categories = ['prefix::page'];
 		$this->cardStyle  = 'category';
 

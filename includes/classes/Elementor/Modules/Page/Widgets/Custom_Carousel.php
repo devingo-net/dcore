@@ -24,7 +24,7 @@ class Custom_Carousel extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Custom_Carousel_Widget';
 		$this->title      = 'Custom Carousel Widget';
-		$this->icon       = 'fad fa-code';
+		$this->icon       = 'fas fa-code';
 		$this->categories = ['prefix::page'];
 
 		parent::__construct($data, $args);

@@ -48,7 +48,6 @@ function dcEnqueueStyles () {
 function dcAdminEnqueueStyles () {
 	wp_enqueue_style(THEME_PREFIX . '-theme-admin-metabox', THEME_ASSETS_STYLE_URI . 'admin/metabox.css');
 	wp_enqueue_style(THEME_PREFIX . '-theme-admin-style', THEME_ASSETS_STYLE_URI . 'admin/global.css');
-	wp_enqueue_style(THEME_PREFIX . '-theme-admin-fontawesome', THEME_ASSETS_URI . 'font/fontawesome/css/all.css');
 }
 
 /**

@@ -26,7 +26,7 @@ class Blog_Posts extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Blog_Posts_Widget';
 		$this->title      = 'Blog Posts Widget';
-		$this->icon       = 'fad fa-newspaper';
+		$this->icon       = 'fas fa-clone';
 		$this->categories = ['prefix::page'];
 		$this->cardStyle = 'blog-post';
 

@@ -66,6 +66,4 @@ if ( is_plugin_active( 'elementor-pro/elementor-pro.php' ) ) {
 		add_action('elementor/init', [ProductSingleModule::class, 'init']);
 		add_action('elementor/documents/register', [ProductSingleModule::class, 'registerDocuments'], 20);
 	}
-
-	add_action('elementor_pro/icons_manager_loaded', [Elementor::class, 'registerIcons']);
 }

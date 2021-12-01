@@ -34,6 +34,8 @@ abstract class Module_Base extends Elementor_Module_Base {
 		}
 		unset($file);
 
-		return $files;
+		$files = apply_filters('dc_manage_widgets_list', $files, $files);
+
+		return apply_filters('dc_manage_' . strtolower($this->get_name()) . '_widgets_list', $files, $files);
 	}
 }

@@ -26,7 +26,7 @@ class Blog_Carousel extends Widget {
 	public function __construct ($data = [], $args = null) {
 		$this->name       = 'Blog_Carousel_Widget';
 		$this->title      = 'Blog Carousel Widget';
-		$this->icon       = 'fad fa-arrows-h';
+		$this->icon       = 'far fa-arrows-h';
 		$this->categories = ['prefix::page'];
 		$this->cardStyle = 'blog-carousel';
 
