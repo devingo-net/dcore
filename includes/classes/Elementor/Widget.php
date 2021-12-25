@@ -289,7 +289,8 @@ class Widget extends Widget_Base {
 
 		$widgetClasses = [
 			THEME_PREFIX . '-widget',
-			THEME_PREFIX . '-' . strtolower($this->class) . '-widget'
+			THEME_PREFIX . '-' . strtolower($this->class) . '-widget',
+			strtolower($this->class) . '-widget'
 		];
 
 		if ( $this->widgetStyles !== false && count($this->widgetStyles) > 1 ) {
