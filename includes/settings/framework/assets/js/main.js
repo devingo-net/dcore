@@ -514,13 +514,13 @@
             unique: $reset.data('unique'),
             nonce: $reset.data('nonce')
           })
-          .done( function( response ) {
-            window.location.reload(true);
-          })
-          .fail( function( response ) {
-            alert( response.error );
-            wp.customize.notifications.remove('csf_field_backup_notification');
-          });
+              .done( function( response ) {
+                window.location.reload(true);
+              })
+              .fail( function( response ) {
+                alert( response.error );
+                wp.customize.notifications.remove('csf_field_backup_notification');
+              });
 
         }
 
@@ -707,7 +707,7 @@
 
         if ( typeof window.wp === 'undefined' || ! window.wp.media || ! window.wp.media.gallery ) { return; }
 
-         // Open media with state
+        // Open media with state
         if ( state === 'gallery' ) {
 
           wp_media_frame = window.wp.media({
@@ -1643,7 +1643,7 @@
 
       $links.on( 'click', function( e ) {
 
-       e.preventDefault();
+        e.preventDefault();
 
         var $link    = $(this),
             index    = $link.index(),
@@ -2274,11 +2274,11 @@
 
     $.each( this.serializeArray(), function(i,o){
       var n = o.name,
-        v = o.value;
+          v = o.value;
 
-        obj[n] = obj[n] === undefined ? v
+      obj[n] = obj[n] === undefined ? v
           : $.isArray( obj[n] ) ? obj[n].concat( v )
-          : [ obj[n], v ];
+              : [ obj[n], v ];
     });
 
     return obj;
@@ -2316,55 +2316,55 @@
             window.wp.ajax.post( 'csf_'+ $panel.data('unique') +'_ajax_save', {
               data: $('#csf-form').serializeJSONCSF()
             })
-            .done( function( response ) {
+                .done( function( response ) {
 
-              // clear errors
-              $('.csf-error').remove();
+                  // clear errors
+                  $('.csf-error').remove();
 
-              if ( Object.keys( response.errors ).length ) {
+                  if ( Object.keys( response.errors ).length ) {
 
-                var error_icon = '<i class="csf-label-error csf-error">!</i>';
+                    var error_icon = '<i class="csf-label-error csf-error">!</i>';
 
-                $.each(response.errors, function( key, error_message ) {
+                    $.each(response.errors, function( key, error_message ) {
 
-                  var $field = $('[data-depend-id="'+ key +'"]'),
-                      $link  = $('#csf-tab-link-'+ ($field.closest('.csf-section').index()+1)),
-                      $tab   = $link.closest('.csf-tab-depth-0');
+                      var $field = $('[data-depend-id="'+ key +'"]'),
+                          $link  = $('#csf-tab-link-'+ ($field.closest('.csf-section').index()+1)),
+                          $tab   = $link.closest('.csf-tab-depth-0');
 
-                  $field.closest('.csf-fieldset').append( '<p class="csf-error csf-error-text">'+ error_message +'</p>' );
+                      $field.closest('.csf-fieldset').append( '<p class="csf-error csf-error-text">'+ error_message +'</p>' );
 
-                  if ( !$link.find('.csf-error').length ) {
-                    $link.append( error_icon );
+                      if ( !$link.find('.csf-error').length ) {
+                        $link.append( error_icon );
+                      }
+
+                      if ( !$tab.find('.csf-arrow .csf-error').length ) {
+                        $tab.find('.csf-arrow').append( error_icon );
+                      }
+
+                    });
+
                   }
 
-                  if ( !$tab.find('.csf-arrow .csf-error').length ) {
-                    $tab.find('.csf-arrow').append( error_icon );
-                  }
+                  $panel.removeClass('csf-saving');
+                  $buttons.prop('disabled', false).attr('value', $value);
+                  flooding = false;
 
+                  CSF.vars.form_modified = false;
+                  CSF.vars.$form_warning.hide();
+
+                  clearTimeout(timeout);
+
+                  var $result_success = $('.csf-form-success');
+                  $result_success.empty().append(response.notice).fadeIn('fast', function() {
+                    timeout = setTimeout( function() {
+                      $result_success.fadeOut('fast');
+                    }, 1000);
+                  });
+
+                })
+                .fail( function( response ) {
+                  alert( response.error );
                 });
-
-              }
-
-              $panel.removeClass('csf-saving');
-              $buttons.prop('disabled', false).attr('value', $value);
-              flooding = false;
-
-              CSF.vars.form_modified = false;
-              CSF.vars.$form_warning.hide();
-
-              clearTimeout(timeout);
-
-              var $result_success = $('.csf-form-success');
-              $result_success.empty().append(response.notice).fadeIn('fast', function() {
-                timeout = setTimeout( function() {
-                  $result_success.fadeOut('fast');
-                }, 1000);
-              });
-
-            })
-            .fail( function( response ) {
-              alert( response.error );
-            });
 
           } else {
 
@@ -2522,7 +2522,7 @@
 
               case 'background-image':
                 sub_shortcode_value = ( sub_shortcode_value.url  ) ? sub_shortcode_value.url : '';
-              break;
+                break;
 
             }
 
@@ -2633,20 +2633,20 @@
             shortcode_key: sc_key,
             nonce: nonce
           })
-          .done( function( response ) {
+              .done( function( response ) {
 
-            $loading.hide();
+                $loading.hide();
 
-            var $appended = $(response.content).appendTo($load);
+                var $appended = $(response.content).appendTo($load);
 
-            $insert.parent().removeClass('hidden');
+                $insert.parent().removeClass('hidden');
 
-            $cloned = $appended.find('.csf--repeat-shortcode').csf_clone();
+                $cloned = $appended.find('.csf--repeat-shortcode').csf_clone();
 
-            $appended.csf_reload_script();
-            $appended.find('.csf-fields').csf_reload_script();
+                $appended.csf_reload_script();
+                $appended.find('.csf-fields').csf_reload_script();
 
-          });
+              });
 
         } else {
 
@@ -2673,7 +2673,7 @@
               var sc_tag = ( sc_name ) ? sc_name : sc_key;
               shortcode += '['+ sc_tag +']'+ sc_value +'[/'+ sc_tag +']';
             });
-          break;
+            break;
 
           case 'group':
 
@@ -2685,15 +2685,15 @@
             shortcode += base.shortcode_parse( serialize[sc_group], sc_group );
             shortcode += '[/' + sc_name + ']';
 
-          break;
+            break;
 
           case 'repeater':
             shortcode += base.shortcode_parse( serialize[sc_group], sc_group );
-          break;
+            break;
 
           default:
             shortcode += base.shortcode_parse( serialize );
-          break;
+            break;
 
         }
 
@@ -2799,100 +2799,38 @@
       if ( $input.hasClass('wp-color-picker') ) {
         $input.closest('.wp-picker-container').after($input).remove();
       }
+      let inputParent = $input.parent();
+      let pickr = Pickr.create({
+        el: $input[0],
+        theme: 'nano', // or 'monolith', or 'nano'
+        default: $input.val(),
+        useAsButton: false,
+        components: {
+          preview: true,
+          opacity: true,
+          hue: true,
+          palette: true,
 
-      $input.wpColorPicker({
-        palettes: palette_color,
-        change: function( event, ui ) {
-
-          var ui_color_value = ui.color.toString();
-
-          $container.removeClass('csf--transparent-active');
-          $container.find('.csf--transparent-offset').css('background-color', ui_color_value);
-          $input.val(ui_color_value).trigger('change');
-
-        },
-        create: function() {
-
-          $container = $input.closest('.wp-picker-container');
-
-          var a8cIris = $input.data('a8cIris'),
-              $transparent_wrap = $('<div class="csf--transparent-wrap">' +
-                                '<div class="csf--transparent-slider"></div>' +
-                                '<div class="csf--transparent-offset"></div>' +
-                                '<div class="csf--transparent-text"></div>' +
-                                '<div class="csf--transparent-button">transparent <i class="fas fa-toggle-off"></i></div>' +
-                                '</div>').appendTo( $container.find('.wp-picker-holder') ),
-              $transparent_slider = $transparent_wrap.find('.csf--transparent-slider'),
-              $transparent_text   = $transparent_wrap.find('.csf--transparent-text'),
-              $transparent_offset = $transparent_wrap.find('.csf--transparent-offset'),
-              $transparent_button = $transparent_wrap.find('.csf--transparent-button');
-
-          if ( $input.val() === 'transparent' ) {
-            $container.addClass('csf--transparent-active');
+          interaction: {
+            rgba: true,
+            input: true,
           }
-
-          $transparent_button.on('click', function() {
-            if ( $input.val() !== 'transparent' ) {
-              $input.val('transparent').trigger('change').removeClass('iris-error');
-              $container.addClass('csf--transparent-active');
-            } else {
-              $input.val( a8cIris._color.toString() ).trigger('change');
-              $container.removeClass('csf--transparent-active');
-            }
-          });
-
-          $transparent_slider.slider({
-            value: picker_color.transparent,
-            step: 1,
-            min: 0,
-            max: 100,
-            slide: function( event, ui ) {
-
-              var slide_value = parseFloat( ui.value / 100 );
-              a8cIris._color._alpha = slide_value;
-              $input.wpColorPicker( 'color', a8cIris._color.toString() );
-              $transparent_text.text( ( slide_value === 1 || slide_value === 0 ? '' : slide_value ) );
-
-            },
-            create: function() {
-
-              var slide_value = parseFloat( picker_color.transparent / 100 ),
-                  text_value  = slide_value < 1 ? slide_value : '';
-
-              $transparent_text.text(text_value);
-              $transparent_offset.css('background-color', picker_color.value);
-
-              $container.on('click', '.wp-picker-clear', function() {
-
-                a8cIris._color._alpha = 1;
-                $transparent_text.text('');
-                $transparent_slider.slider('option', 'value', 100);
-                $container.removeClass('csf--transparent-active');
-                $input.trigger('change');
-
-              });
-
-              $container.on('click', '.wp-picker-default', function() {
-
-                var default_color = CSF.funcs.parse_color( $input.data('default-color') ),
-                    default_value = parseFloat( default_color.transparent / 100 ),
-                    default_text  = default_value < 1 ? default_value : '';
-
-                a8cIris._color._alpha = default_value;
-                $transparent_text.text(default_text);
-                $transparent_slider.slider('option', 'value', default_color.transparent);
-
-                if ( default_color.value === 'transparent' ) {
-                  $input.removeClass('iris-error');
-                  $container.addClass('csf--transparent-active');
-                }
-
-              });
-
-            }
-          });
         }
       });
+      inputParent.append($input);
+
+      pickr.on('change', (color, source, instance) => {
+        pickr.setColor(color.toRGBA().toString(0));
+      });
+      pickr.on('save', (color, instance) => {
+        inputParent.children('input').val(color.toRGBA().toString(0));
+      });
+      inputParent.children('input').on('click',function () {
+        pickr.show();
+      }).on('keydown keyup change',function () {
+        pickr.setColor($(this).val());
+      });
+
 
     });
   };
@@ -3122,7 +3060,7 @@
 
       if ( $complex.length ) {
 
-       var unique_id = $complex.data('unique-id');
+        var unique_id = $complex.data('unique-id');
 
         if ( unique_id === undefined ) {
           return;
