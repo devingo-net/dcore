@@ -219,6 +219,12 @@ function the_subtitle(string $before = '', string $after = '', $post = null): vo
     echo $before . $subTitle . $after;
 }
 
+/**
+ * get parsed template path
+ *
+ * @param string $path
+ * @return string
+ */
 function dcGetTemplatePath(string $path = ''): string
 {
     $parsedPath = realpath(get_template_directory() . '/' . $path);
