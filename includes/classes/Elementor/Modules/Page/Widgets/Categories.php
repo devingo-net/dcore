@@ -3,9 +3,6 @@
 namespace DCore\Elementor\Modules\Page\Widgets;
 
 use Elementor\Controls_Manager;
-use Elementor\Repeater;
-use DCore\Elementor\Control_Types\Group_Control_Query;
-use DCore\Woocommerce\Products_Renderer;
 use DCore\Elementor\Widget;
 
 /**

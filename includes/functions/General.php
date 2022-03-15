@@ -228,8 +228,34 @@ function the_subtitle(string $before = '', string $after = '', $post = null): vo
 function dcGetTemplatePath(string $path = ''): string
 {
     $parsedPath = realpath(get_template_directory() . '/' . $path);
-    if (!file_exists($parsedPath)){
-        die(sprintf('% <br> file not found!',$parsedPath));
+    if (!file_exists($parsedPath)) {
+        die(sprintf('% <br> file not found!', $parsedPath));
     }
     return $parsedPath;
+}
+
+/**
+ * get request user ip
+ *
+ * @return mixed|string
+ */
+function dcGetUserIP()
+{
+    if (isset($_SERVER['HTTP_CLIENT_IP']) && !empty($_SERVER['HTTP_CLIENT_IP'])) {
+        return $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        return $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
+    return $_SERVER['REMOTE_ADDR'] ?? '';
+}
+
+/**
+ * get post views count
+ *
+ * @param int $postID
+ * @return int
+ */
+function dcGetPostViews(int $postID): int
+{
+    return \DCore\Features\Statistics::getRecordsCount($postID);
 }

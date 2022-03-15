@@ -431,7 +431,8 @@ class Widget extends Widget_Base {
 				$this->add_responsive_control($prefix . 'Opacity' . $keyName, [
 					'label'          => __('Opacity', THEME_TEXTDOMAIN),
 					'type'           => Controls_Manager::SLIDER,
-					'default'        => [
+                    'devices' => [ 'desktop', 'tablet', 'mobile' ],
+					'desktop_default'        => [
 						'unit' => '%',
 					],
 					'tablet_default' => [
@@ -840,9 +841,9 @@ class Widget extends Widget_Base {
 	/**
 	 * add Swiper carousel options controllers
 	 *
-	 * @param array $defaults
+	 * @param array $optionsDefault
 	 */
-	public function addSwiperCarouselOptions (array $defaults = []) : void {
+	public function addSwiperCarouselOptions (array $optionsDefault = []) : void {
 
 		$this->start_controls_section('Slider_settings', [
 			'label'    => __('Slider', THEME_TEXTDOMAIN),
@@ -889,15 +890,15 @@ class Widget extends Widget_Base {
 					'max' => 100,
 				],
 			],
-			'desktop_default' => $defaults['verticalSliderHeight_desktop'] ?? [
+			'desktop_default' => $optionsDefault['verticalSliderHeight_desktop'] ?? [
 					'unit' => 'px',
 					'size' => 300,
 				],
-			'tablet_default'  => $defaults['verticalSliderHeight_tablet'] ?? [
+			'tablet_default'  => $optionsDefault['verticalSliderHeight_tablet'] ?? [
 					'unit' => 'px',
 					'size' => 300,
 				],
-			'mobile_default'  => $defaults['verticalSliderHeight_mobile'] ?? [
+			'mobile_default'  => $optionsDefault['verticalSliderHeight_mobile'] ?? [
 					'unit' => 'px',
 					'size' => 300,
 				],
@@ -911,7 +912,7 @@ class Widget extends Widget_Base {
 		$this->add_control('slideAnimation', [
 			'label'   => __('Slide Animation', THEME_TEXTDOMAIN),
 			'type'    => Controls_Manager::SELECT,
-			'default' => $defaults['slideAnimation'] ?? 'none',
+			'default' => $optionsDefault['slideAnimation'] ?? 'none',
 			'options' => [
 				'none'      => __('None', THEME_TEXTDOMAIN),
 				'fade'      => __('Fade', THEME_TEXTDOMAIN),
@@ -926,7 +927,7 @@ class Widget extends Widget_Base {
 			'label_on'     => __('Count', THEME_TEXTDOMAIN),
 			'label_off'    => __('Auto', THEME_TEXTDOMAIN),
 			'return_value' => 'count',
-			'default'      => $defaults['slidesCountMode'] ?? 'count',
+			'default'      => $optionsDefault['slidesCountMode'] ?? 'count',
 		]);
 		$this->add_responsive_control('slidesPerView', [
 			'label'           => __('Slides Per View', THEME_TEXTDOMAIN),
@@ -934,9 +935,11 @@ class Widget extends Widget_Base {
 			'min'             => 1,
 			'max'             => 20,
 			'step'            => 1,
-			'desktop_default' => $defaults['slidesPerView_desktop'] ?? 5,
-			'tablet_default'  => $defaults['slidesPerView_tablet'] ?? 3,
-			'mobile_default'  => $defaults['slidesPerView_mobile'] ?? 2,
+            'devices' => [ 'desktop', 'tablet', 'mobile' ],
+			'desktop_default' => $optionsDefault['slidesPerView_desktop'] ?? 5,
+			'tablet_default'  => $optionsDefault['slidesPerView_tablet'] ?? 3,
+			'mobile_default'  => $optionsDefault['slidesPerView_mobile'] ?? 2,
+            'frontend_available'   =>  true,
 			'condition'       => [
 				'slidesCountMode' => 'count'
 			]
@@ -983,15 +986,15 @@ class Widget extends Widget_Base {
 					'max' => 100,
 				],
 			],
-			'desktop_default' => $defaults['verticalSlidesHeight_desktop'] ?? [
+			'desktop_default' => $optionsDefault['verticalSlidesHeight_desktop'] ?? [
 					'unit' => 'px',
 					'size' => 300,
 				],
-			'tablet_default'  => $defaults['verticalSlidesHeight_tablet'] ?? [
+			'tablet_default'  => $optionsDefault['verticalSlidesHeight_tablet'] ?? [
 					'unit' => 'px',
 					'size' => 300,
 				],
-			'mobile_default'  => $defaults['verticalSlidesHeight_mobile'] ?? [
+			'mobile_default'  => $optionsDefault['verticalSlidesHeight_mobile'] ?? [
 					'unit' => 'px',
 					'size' => 300,
 				],
@@ -1042,15 +1045,15 @@ class Widget extends Widget_Base {
 					'max' => 100,
 				],
 			],
-			'desktop_default' => $defaults['slidesHeight_desktop'] ?? [
+			'desktop_default' => $optionsDefault['slidesHeight_desktop'] ?? [
 					'unit' => 'px',
 					'size' => 500,
 				],
-			'tablet_default'  => $defaults['slidesHeight_tablet'] ?? [
+			'tablet_default'  => $optionsDefault['slidesHeight_tablet'] ?? [
 					'unit' => 'px',
 					'size' => 500,
 				],
-			'mobile_default'  => $defaults['slidesHeight_mobile'] ?? [
+			'mobile_default'  => $optionsDefault['slidesHeight_mobile'] ?? [
 					'unit' => 'px',
 					'size' => 500,
 				],
@@ -1076,9 +1079,11 @@ class Widget extends Widget_Base {
 			'min'             => 1,
 			'max'             => 500,
 			'step'            => 5,
+            'devices' => [ 'desktop', 'tablet', 'mobile' ],
 			'desktop_default' => 10,
 			'tablet_default'  => 10,
 			'mobile_default'  => 10,
+            'frontend_available'   =>  true,
 		]);
 		$this->add_control('centeredSlides', [
 			'label'        => __('Centered Slides', THEME_TEXTDOMAIN),
@@ -1094,7 +1099,7 @@ class Widget extends Widget_Base {
 			'label_on'     => __('True', THEME_TEXTDOMAIN),
 			'label_off'    => __('False', THEME_TEXTDOMAIN),
 			'return_value' => 'true',
-			'default'      => $defaults['allowTouchMove'] ?? 'true'
+			'default'      => $optionsDefault['allowTouchMove'] ?? 'true'
 		]);
 		$this->add_control('freeMode', [
 			'label'        => __('Free Mode', THEME_TEXTDOMAIN),
@@ -1113,7 +1118,7 @@ class Widget extends Widget_Base {
 			'label_on'     => __('True', THEME_TEXTDOMAIN),
 			'label_off'    => __('False', THEME_TEXTDOMAIN),
 			'return_value' => 'true',
-			'default'      => $defaults['infiniteLoop'] ?? 'false'
+			'default'      => $optionsDefault['infiniteLoop'] ?? 'false'
 		]);
 		$this->add_control('autoPlay', [
 			'label'        => __('Auto Play', THEME_TEXTDOMAIN),
@@ -1121,12 +1126,12 @@ class Widget extends Widget_Base {
 			'label_on'     => __('True', THEME_TEXTDOMAIN),
 			'label_off'    => __('False', THEME_TEXTDOMAIN),
 			'return_value' => 'true',
-			'default'      => $defaults['autoPlay'] ?? 'false'
+			'default'      => $optionsDefault['autoPlay'] ?? 'false'
 		]);
 		$this->add_control('autoPlayDuration', [
 			'label'     => __('Auto Play Duration', THEME_TEXTDOMAIN),
 			'type'      => Controls_Manager::NUMBER,
-			'default'   => $defaults['autoPlayDuration'] ?? 6000,
+			'default'   => $optionsDefault['autoPlayDuration'] ?? 6000,
 			'condition' => [
 				'autoPlay' => 'true'
 			]
@@ -1137,23 +1142,24 @@ class Widget extends Widget_Base {
 			'label_on'        => __('True', THEME_TEXTDOMAIN),
 			'label_off'       => __('False', THEME_TEXTDOMAIN),
 			'return_value'    => 'true',
-			'desktop_default' => $defaults['sliderNavs'] ?? 'true',
-			'tablet_default'  => $defaults['sliderNavs_tablet'] ?? 'true',
-			'mobile_default'  => $defaults['sliderNavs_mobile'] ?? 'true',
+            'devices' => [ 'desktop', 'tablet', 'mobile' ],
+			'desktop_default' => $optionsDefault['sliderNavs'] ?? 'true',
+			'tablet_default'  => $optionsDefault['sliderNavs_tablet'] ?? 'true',
+			'mobile_default'  => $optionsDefault['sliderNavs_mobile'] ?? 'true',
+            'frontend_available'   =>  true,
 		]);
-
-
 		$this->add_responsive_control('sliderPagination', [
 			'label'           => __('Slider Pagination', THEME_TEXTDOMAIN),
 			'type'            => Controls_Manager::SWITCHER,
 			'label_on'        => __('True', THEME_TEXTDOMAIN),
 			'label_off'       => __('False', THEME_TEXTDOMAIN),
 			'return_value'    => 'true',
-			'desktop_default' => $defaults['sliderPagination'] ?? 'true',
-			'tablet_default'  => $defaults['sliderPagination_tablet'] ?? 'true',
-			'mobile_default'  => $defaults['sliderPagination_mobile'] ?? 'true'
+            'devices' => [ 'desktop', 'tablet', 'mobile' ],
+			'desktop_default' => $optionsDefault['sliderPagination'] ?? 'true',
+			'tablet_default'  => $optionsDefault['sliderPagination_tablet'] ?? 'true',
+			'mobile_default'  => $optionsDefault['sliderPagination_mobile'] ?? 'true',
+            'frontend_available'   =>  true,
 		]);
-
 
 		$this->add_control('sliderScrollbar', [
 			'label'        => __('Slider Scroll Bar', THEME_TEXTDOMAIN),
@@ -1161,7 +1167,7 @@ class Widget extends Widget_Base {
 			'label_on'     => __('True', THEME_TEXTDOMAIN),
 			'label_off'    => __('False', THEME_TEXTDOMAIN),
 			'return_value' => 'true',
-			'default'      => $defaults['sliderScrollbar'] ?? 'false'
+			'default'      => $optionsDefault['sliderScrollbar'] ?? 'false'
 		]);
 		$this->end_controls_section();
 
@@ -1372,16 +1378,16 @@ class Widget extends Widget_Base {
 	/**
 	 * @param $settings
 	 *
-	 * @return \DCore\Woocommerce\Current_Query_Renderer|\DCore\Woocommerce\Products_Renderer
+	 * @return mixed
 	 */
 	public static function get_shortcode_object ($settings) {
-		if ( !class_exists('DCore\Woocommerce\Current_Query_Renderer') ) {
+		if ( !class_exists('\DCore\Woocommerce\Current_Query_Renderer') || !class_exists('\DCore\Woocommerce\Products_Renderer') ) {
 			return null;
 		}
-		if ( 'current_query' === $settings[Products_Renderer::QUERY_CONTROL_NAME . '_post_type'] ) {
+		if ( 'current_query' === $settings[\DCore\Woocommerce\Products_Renderer::QUERY_CONTROL_NAME . '_post_type'] ) {
 			$type = 'current_query';
 
-			return new DCore\Woocommerce\Current_Query_Renderer($settings, $type);
+			return new \DCore\Woocommerce\Current_Query_Renderer($settings, $type);
 		}
 		$type = 'products';
 
@@ -1389,6 +1395,6 @@ class Widget extends Widget_Base {
 			return null;
 		}
 
-		return new DCore\Woocommerce\Products_Renderer($settings, $type);
+		return new \DCore\Woocommerce\Products_Renderer($settings, $type);
 	}
 }

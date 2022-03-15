@@ -27,7 +27,7 @@ class Api {
 		$method = $_POST['method'] ?? '';
 		$nonce  = $_POST['nonce'] ?? '';
 
-		if ( !wp_doing_ajax() || !wp_verify_nonce($nonce, 'ajax-nonce') ) {
+		if ( !wp_doing_ajax() || ($module !== 'Product_Carousel' && !wp_verify_nonce($nonce, 'ajax-nonce')) ) {
 			self::responseError(__('Direct access is blocked!', THEME_TEXTDOMAIN));
 		}
 		if ( empty($module) || empty($method) ) {

@@ -131,3 +131,4 @@ add_action('widgets_init', 'dcSidebarWidgetsInit');
 add_filter('body_class', 'dcBodyClasses');
 add_filter('upload_mimes', 'dcEnableExtendedUpload');
 add_filter('wp_check_filetype_and_ext', 'dcFixCheckFiletypeAndExt', 10, 4);
+add_filter('wp_head', [\DCore\Features\Statistics::class,'init']);
