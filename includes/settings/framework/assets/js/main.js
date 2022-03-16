@@ -2126,8 +2126,13 @@
           if ( $library.length && $library.indexOf(attributes.subtype) === -1 && $library.indexOf(attributes.type) === -1 ) {
             return;
           }
-
-          $input.val(attributes.url).trigger('change');
+          $input.parents('.csf--wrap').find('.csf--preview img').attr('src',attributes.url);
+          $input.parents('.csf--wrap').find('.csf--preview').removeClass('hidden');
+          if ($input.hasClass('media-id')) {
+            $input.val(attributes.id).trigger('change');
+          }else{
+            $input.val(attributes.url).trigger('change');
+          }
 
         });
 
@@ -2137,6 +2142,7 @@
 
       $remove_button.on('click', function( e ) {
         e.preventDefault();
+        $input.parents('.csf--wrap').find('.csf--preview').addClass('hidden');
         $input.val('').trigger('change');
       });
 

@@ -524,7 +524,7 @@ if ( !class_exists('CSF') ) {
 				self::$version, true);
 			wp_enqueue_script('csf-color-picker', self::include_plugin_url('assets/js/pickr' . $min . '.js'), [],
 				self::$version, true);
-			wp_enqueue_script('csf', self::include_plugin_url('assets/js/main' . $min . '.js'), ['csf-color-picker','csf-plugins'],
+			wp_enqueue_script('csf', self::include_plugin_url('assets/js/main.js'), ['csf-color-picker','csf-plugins'],
 				self::$version, true);
 
 			// Main variables

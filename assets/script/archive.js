@@ -28,6 +28,7 @@ import jQuery from "jquery";
 
     $(document).on('click', '.has-ajax-filter .woocommerce-ordering a,' +
         '.has-ajax-filter .woocommerce-pagination a, ' +
+        '.has-ajax-filter .widget_layered_nav_filters a, ' +
         '.has-ajax-filter .woocommerce-widget-layered-nav a, ' +
         '.has-ajax-filter .widget_rating_filter a', function (e) {
         if ($('body').hasClass('archive-is-loading')) {
@@ -70,6 +71,21 @@ import jQuery from "jquery";
             }
             $(this).html(productColumn).find('form').addClass('ajax-loaded');
         });
+        let activeFilters = pageContent.find('.widget_layered_nav_filters');
+        if (activeFilters.length > 0){
+            if ($('.widget_layered_nav_filters').length > 0){
+                $('.widget_layered_nav_filters').html(activeFilters.html());
+            }else{
+                if ($('#shop-sidebar').length > 0) {
+                    $('#shop-sidebar').prepend(activeFilters);
+                }else{
+                    $('.sidebar-widget.woocommerce').parent().prepend(activeFilters);
+                }
+            }
+        }else{
+            $('.widget_layered_nav_filters').remove();
+        }
+
         $('.woocommerce-widget-layered-nav, .widget_rating_filter').each(function () {
             if ($(this).find('.woocommerce-widget-layered-nav-dropdown').length > 0) {
                 return;

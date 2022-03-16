@@ -35,9 +35,10 @@
         return false;
     });
 
-
     $(document).on('change','.custom-metabox-item input, .custom-metabox-item select', function () {
-        $('[data-condition]').hide().each(function () {
+        let conditionSelectors = $('[data-condition*="'+$(this).attr('name')+'"]');
+        conditionSelectors.hide();
+        conditionSelectors.each(function () {
             let jsonData = $(this).data('condition');
             $.each(jsonData, (sel, val) => {
                 if ($('[name="'+sel+'"]').val() !== val) {
@@ -49,13 +50,14 @@
             });
         });
     });
+
     $(document).ready(function () {
         $('.custom-metabox-item input, .custom-metabox-item select').trigger('change');
     });
-    $(document).ajaxSuccess(function() {
-        $('.custom-metabox-item input, .custom-metabox-item select').trigger('change');
+
+    $(document).ajaxSuccess(function(event, xhr, settings) {
+        if (typeof settings.data !== "undefined" && settings.data.indexOf('add-menu-item') !== -1) {
+            $('.custom-metabox-item input, .custom-metabox-item select').trigger('change');
+        }
     });
-
-
-
 })(jQuery);
