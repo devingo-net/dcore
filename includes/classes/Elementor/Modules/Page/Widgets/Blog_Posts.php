@@ -68,7 +68,8 @@ class Blog_Posts extends Widget {
 			'step'            => 1,
 			'desktop_default' => 1,
 			'tablet_default'  => 1,
-			'mobile_default'  => 1
+			'mobile_default'  => 1,
+            'frontend_available' => true
 		]);
 
 		$this->add_responsive_control('columnsPadding', [
@@ -135,9 +136,22 @@ class Blog_Posts extends Widget {
 		$elementorQuery              = Module_Query::instance();
 		$settings['paginateKey']     = 'page_' . $this->get_id();
 		$settings['currentPage']     = isset($_GET[$settings['paginateKey']]) ? (int) $_GET[$settings['paginateKey']] : 1;
-		$postQuery                   = $elementorQuery->get_query($this, 'blogPosts', [
-			'paged' => $settings['paginateType'] === 'number' ? $settings['currentPage'] : 1
-		]);
+
+
+
+        $cacheName = 'dc_product_query_' . crc32(serialize($this->get_settings_for_display()));
+
+        if (isset($GLOBALS[$cacheName])) {
+            $postQuery = $GLOBALS[$cacheName];
+        }else{
+            $postQuery = $elementorQuery->get_query($this, 'blogPosts', [
+                'paged' => $settings['paginateType'] === 'number' ? $settings['currentPage'] : 1,
+                'cache_results' => true
+            ]);
+            $GLOBALS[$cacheName] = $postQuery;
+        }
+
+
 		$settings['totalPages']      = $postQuery->max_num_pages;
 
 

@@ -66,7 +66,8 @@ class Search extends Api {
 		$searchArgs = [
 			'post_type'      => $postType,
 			's'              => $params['search'],
-			'posts_per_page' => $count
+			'posts_per_page' => $count,
+            'post_status'   =>  'publish'
 		];
 
 		$query = new WP_Query($searchArgs);
