@@ -15,6 +15,7 @@ define('DSP', DIRECTORY_SEPARATOR);
 define('THEME_DIR', get_template_directory());
 define('THEME_INCLUDES_DIR', THEME_DIR . DSP . 'includes');
 define('THEME_LANGS_DIR', THEME_INCLUDES_DIR . DSP . 'languages');
+define('THEME_DIST_DIR', THEME_DIR . DSP . 'dist');
 define('THEME_TEMPLATES_DIR', THEME_DIR . DSP . 'templates');
 define('THEME_TEMPLATES_GLOBALS_DIR', THEME_TEMPLATES_DIR . DSP . 'globals');
 define('THEME_TEMPLATES_GLOBALS_FRAGMENTS_DIR', THEME_TEMPLATES_GLOBALS_DIR . DSP . 'fragments');

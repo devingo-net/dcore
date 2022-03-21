@@ -20,40 +20,41 @@ use JsonException;
 class Theme {
 	public static $inlineStyles = [];
 
-	/**
-	 * get template default configs
-	 *
-	 * @param bool $toArray
-	 *
-	 * @return array|object
-	 */
-	public static function getConfigs (bool $toArray = false) {
-		$configs = Configs::$configJSON;
-		if ( $toArray ) {
-			return $configs;
-		}
+    /**
+     * get get configs hash
+     *
+     * @return array|object
+     */
+    public static function getConfigsHash () : string{
+        $configPath = __DIR__ . DIRECTORY_SEPARATOR . 'Configs.php';
+        if (!file_exists($configPath)){
+            return '';
+        }
+        return sha1_file($configPath);
+    }
 
-		return json_decode(json_encode($configs), false);
-	}
+    /**
+     * get template default configs
+     *
+     * @return array
+     */
+    public static function getConfigs (): array
+    {
+        return Configs::getConfigJSON();
+    }
 
-	/**
-	 * get template default config
-	 *
-	 * @param string $opt
-	 *
-	 * @param mixed  $def
-	 *
-	 * @param bool   $toArray
-	 *
-	 * @return object|string|array
-	 */
-	public static function getConfig (string $opt, $def = null, bool $toArray = false) {
-		$opts = self::getConfigs($toArray);
-		if ( $toArray ) {
-			return $opts[$opt] ?? $def;
-		}
-
-		return $opts->{$opt} ?? $def;
+    /**
+     * get template default config
+     *
+     * @param string $opt
+     *
+     * @param mixed $def
+     * @param bool $dep
+     * @return object|string|array
+     */
+	public static function getConfig (string $opt, $def = null, $dep = false) {
+		$opts = self::getConfigs();
+        return $opts[$opt] ?? $def;
 	}
 
 	/**
@@ -63,15 +64,16 @@ class Theme {
 	 *
 	 * @param null   $def
 	 *
-	 * @return object|null
-	 */
-	public static function getShortCodeConfigs (string $name, $def = null) : ?object {
-		$opts = self::getConfig("shortcodes");
-		if ( $opts === null ) {
+	 * @return mixed
+     */
+	public static function getShortCodeConfigs (string $name, $def = null)
+    {
+		$opts = Configs::getShortcodesValues();
+		if ( empty($opts) ) {
 			return $def;
 		}
 
-		return $opts->{$name} ?? $def;
+		return $opts[$name] ?? $def;
 	}
 
 	/**
@@ -86,56 +88,21 @@ class Theme {
 	 */
 	public static function getShortCodeConfig (string $name, string $option, $def = null) {
 		$opts = self::getShortCodeConfigs($name);
-		if ( $opts === null ) {
+		if (  empty($opts) ) {
 			return $def;
 		}
 
-		return $opts->{$option} ?? $def;
-	}
-
-	/**
-	 * get theme settings Default configs
-	 *
-	 * @param string $name
-	 *
-	 * @param null   $def
-	 *
-	 * @return object|null
-	 */
-	public static function getThemeSettingsConfigs (string $name, $def = null) : ?object {
-		$opts = self::getConfig("theme-settings");
-		if ( $opts === null ) {
-			return $def;
-		}
-
-		return $opts->{$name} ?? $def;
-	}
-
-	/**
-	 * get shop settings Default configs
-	 *
-	 * @param string $name
-	 *
-	 * @param null   $def
-	 *
-	 * @return object|null
-	 */
-	public static function getShopSettingsConfigs (string $name, $def = null) : ?object {
-		$opts = self::getConfig("shop-settings");
-		if ( $opts === null ) {
-			return $def;
-		}
-
-		return $opts->{$name} ?? $def;
+		return $opts[$option] ?? $def;
 	}
 
 	/**
 	 * get dynamic styles configs
 	 *
-	 * @return object|null
+	 * @return array
 	 */
-	public static function getDynamicStylesConfig () {
-		return self::getConfig("styleApply", [], true);
+	public static function getDynamicStylesConfig (): array
+    {
+		return Configs::getStyleApply();
 	}
 
 	/**
@@ -215,12 +182,27 @@ class Theme {
 	 * @return string
 	 */
 	public static function dynamicStyles () : string {
+	    $cacheName = 'dynamic_styles_' . getThemeOptionsHash() . '_' . getShopOptionsHash() . '_' . self::getConfigsHash();
 		$cssOutPut          = '';
 		$colorPrimary       = getThemeOptions('primary-color', '');
 		$colorPrimaryDark   = getThemeOptions('primary-color-dark', '');
 		$colorSecondary     = getThemeOptions('secondary-color', '');
 		$colorSecondaryDark = getThemeOptions('secondary-color-dark', '');
 
+		$output = dcGetFileCache($cacheName,false);
+
+        $siteFont  = getThemeOptions('site-font', '');
+        $fontsList = self::getFonts();
+
+        if ( $siteFont !== 'upload' && $siteFont !== '' ) {
+            $currentFont = $fontsList[$siteFont];
+
+            wp_enqueue_style(prefixStr('custom-font'), get_template_directory_uri() . ($currentFont['url'] ?? ''));
+        }
+
+		if ($output !== false){
+		    return $output;
+        }
 
 		self::addStyle([
 			'.button-primary',
@@ -318,7 +300,11 @@ class Theme {
 							$matchedSetting[1] = explode(':', $matchedSetting[1]);
 							$optKey            = $matchedSetting[1][0];
 							$colorAlpha        = $matchedSetting[1][1] ?? 100;
-							$value             = str_replace($matchedSetting[0], Helper::hexToRgba(getThemeOptions($optKey, '#000'), $colorAlpha), $value);
+							$optValue = getThemeOptions($optKey, '');
+							if (empty($optValue)){
+							    continue 2;
+                            }
+							$value             = str_replace($matchedSetting[0], Helper::hexToRgba($optValue, $colorAlpha), $value);
 						}
 					}
 
@@ -329,16 +315,6 @@ class Theme {
 					self::addStyle([$selector], $property, $value);
 				}
 			}
-		}
-
-
-		$siteFont  = getThemeOptions('site-font', '');
-		$fontsList = self::getFonts();
-
-		if ( $siteFont !== 'upload' && $siteFont !== '' ) {
-			$currentFont = $fontsList[$siteFont];
-
-			wp_enqueue_style(prefixStr('custom-font'), get_template_directory_uri() . ($currentFont['url'] ?? ''));
 		}
 
 		if ( $siteFont === '' ) {
@@ -358,7 +334,7 @@ class Theme {
 		}
 
 
-		$fontConfigs = self::getConfig('fontApply', []);
+		$fontConfigs = Configs::getFontApply();
 		if ( !is_array($fontConfigs) ) {
 			$fontConfigs = [];
 		}
@@ -367,7 +343,9 @@ class Theme {
 			'body'
 		], $fontConfigs), 'font-family', $siteFont);
 
-		return $cssOutPut . PHP_EOL . self::arrayToCSS();
+		$output = $cssOutPut . PHP_EOL . self::arrayToCSS();
+        dcSetFileCache($cacheName,$output,24*60*60);
+		return $output;
 	}
 
 	public static function addStyle (array $selectors, string $property, string $value) : void {
@@ -442,8 +420,8 @@ class Theme {
 	 * @return array
 	 */
 	public static function getCardsList (string $type) : array {
-		$globalCards = Configs::$globalCards[$type];
-		if ( !isset($globalCards) || empty($globalCards) ) {
+		$globalCards = Configs::getGlobalCards();
+		if ( !isset($globalCards[$type]) || empty($globalCards[$type]) ) {
 			return [];
 		}
 
@@ -461,7 +439,7 @@ class Theme {
 	 * @return array
 	 */
 	public static function getFonts () : array {
-		return Configs::$fonts ?? [];
+		return Configs::getFonts();
 	}
 
 	/**

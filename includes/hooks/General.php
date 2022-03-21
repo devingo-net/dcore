@@ -86,9 +86,12 @@ function dcBodyClasses ($classes) {
 		$classes[] = 'product-gallery-zoom';
 	}
 
-	if ( getShopOptions('archive-ajax-filters', '0') === '1' && (is_tax(['product_cat','product_tag']) || is_shop())) {
-		$classes[] = 'has-ajax-filter';
-	}
+    if ( getShopOptions('archive-ajax-filters', '0') === '1' && (is_tax(['product_cat','product_tag']) || is_shop())) {
+        $classes[] = 'has-ajax-filter';
+    }
+    if ( !is_rtl() ) {
+        $classes[] = 'ltr';
+    }
 	return $classes;
 }
 

@@ -76,20 +76,25 @@ function getThemeOptions(string $optionName, $default = null)
         $themeOptions = get_option(THEME_PREFIX . '-theme-options');
     }
 
-    if (isset($themeOptions[$optionName])) {
-        return $themeOptions[$optionName];
-    }
-
-    global $getThemeSettingsConfigDefaults;
-    if (!isset($getThemeSettingsConfigDefaults) || empty($getThemeSettingsConfigDefaults)) {
-        $getThemeSettingsConfigDefaults = Theme::getThemeSettingsConfigs($optionName);
-    }
-
-    if ($getThemeSettingsConfigDefaults === null || is_array($getThemeSettingsConfigDefaults)) {
+    if (!isset($themeOptions[$optionName])) {
         return $default;
     }
 
-    return $getThemeSettingsConfigDefaults[$optionName] ?? $default;
+    return $themeOptions[$optionName];
+}
+
+/**
+ * get theme options hash
+ *
+ * @return string
+ */
+function getThemeOptionsHash(): string
+{
+    global $themeOptions;
+    if (!isset($themeOptions) || empty($themeOptions)) {
+        getThemeOptions('');
+    }
+    return sha1(serialize($themeOptions));
 }
 
 /**
@@ -107,20 +112,25 @@ function getShopOptions(string $optionName, $default = null)
         $shopOptions = get_option(THEME_PREFIX . '-shop-options');
     }
 
-    if (isset($shopOptions[$optionName])) {
-        return $shopOptions[$optionName];
-    }
-
-    global $getShopSettingsConfigDefaults;
-    if (!isset($getShopSettingsConfigDefaults) || empty($getShopSettingsConfigDefaults)) {
-        $getShopSettingsConfigDefaults = Theme::getShopSettingsConfigs($optionName);
-    }
-
-    if ($getShopSettingsConfigDefaults === null || is_array($getShopSettingsConfigDefaults)) {
+    if (!isset($shopOptions[$optionName])) {
         return $default;
     }
 
-    return $getShopSettingsConfigDefaults[$optionName] ?? $default;
+    return $shopOptions[$optionName];
+}
+
+/**
+ * get shop options hash
+ *
+ * @return string
+ */
+function getShopOptionsHash(): string
+{
+    global $shopOptions;
+    if (!isset($shopOptions) || empty($shopOptions)) {
+        getShopOptions('');
+    }
+    return sha1(serialize($shopOptions));
 }
 
 /**
@@ -258,4 +268,75 @@ function dcGetUserIP()
 function dcGetPostViews(int $postID): int
 {
     return \DCore\Features\Statistics::getRecordsCount($postID);
+}
+
+/**
+ * Set data to cache in file
+ *
+ * @param string $name
+ * @param $data
+ * @param int $expire
+ * @param string $group
+ * @return bool
+ */
+
+function dcSetFileCache(string $name, $data, int $expire = 0, string $group = 'default'): bool
+{
+    global $dcCache;
+    if (!isset($dcCache) || empty($dcCache)) {
+        $dcCache = new DCore\Cache();
+    }
+    return $dcCache->setFile($name, $data, $expire, $group);
+}
+
+/**
+ * Get data from cached file
+ *
+ * @param string $name
+ * @param false $default
+ * @param string $group
+ * @return mixed
+ */
+function dcGetFileCache(string $name, $default = false, string $group = 'default')
+{
+    global $dcCache;
+    if (!isset($dcCache) || empty($dcCache)) {
+        $dcCache = new DCore\Cache();
+    }
+    return $dcCache->getFile($name, $default, $group);
+}
+/**
+ * Set data to cache
+ *
+ * @param string $name
+ * @param $data
+ * @param int $expire
+ * @param string $group
+ * @return bool
+ */
+
+function dcSetCache(string $name, $data, int $expire = 0, string $group = 'default'): bool
+{
+    global $dcCache;
+    if (!isset($dcCache) || empty($dcCache)) {
+        $dcCache = new DCore\Cache();
+    }
+    return $dcCache->set($name, $data, $expire, $group);
+}
+
+/**
+ * Get data from cache
+ *
+ * @param string $name
+ * @param false $default
+ * @param string $group
+ * @return mixed
+ */
+function dcGetCache(string $name, $default = false, string $group = 'default')
+{
+    global $dcCache;
+    if (!isset($dcCache) || empty($dcCache)) {
+        $dcCache = new DCore\Cache();
+    }
+    return $dcCache->get($name, $default, $group);
 }

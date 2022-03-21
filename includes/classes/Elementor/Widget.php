@@ -21,6 +21,7 @@ use DCore\Configs;
 use DCore\Elementor;
 use DCore\Helper;
 use DCore\Theme;
+use Exception;
 
 /**
  * Class DC_Widget
@@ -46,12 +47,13 @@ class Widget extends Widget_Base
      * @param array $data
      * @param null $args
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function __construct(array $data = [], $args = null)
     {
         $this->class = strtolower(substr(strrchr(static::class, "\\"), 1));
-        $this->widgetConfigs = Configs::$shortcodes[$this->class] ?? false;
+        $this->widgetConfigs = Configs::getShortcodes();
+        $this->widgetConfigs = $this->widgetConfigs[$this->class] ?? false;
         if ($this->widgetConfigs !== false) {
             $this->widgetStyles = Elementor::getWidgetStyles($this->widgetConfigs);
         }
@@ -820,7 +822,8 @@ class Widget extends Widget_Base
             return;
         }
 
-        $templates = Configs::$globalCards[$this->cardStyle] ?? [];
+        $templates = Configs::getGlobalCards();
+        $templates = $templates[$this->cardStyle] ?? [];
         if (empty($templates)) {
             return;
         }
@@ -1216,7 +1219,7 @@ class Widget extends Widget_Base
     public function getSwiperCarouselOptions(array $settings): string
     {
         $cacheName = 'dc_carousel_options_' . crc32(serialize($settings));
-        $carouselSettings = wp_cache_get($cacheName,'dcore_widgets');
+        $carouselSettings = dcGetCache($cacheName);
 
         if ($carouselSettings !== false){
             return $carouselSettings;
@@ -1373,7 +1376,7 @@ class Widget extends Widget_Base
             $carouselSettings = '{}';
         }
 
-        wp_cache_set($cacheName,$carouselSettings,'dcore_widgets',24*60*60);
+        dcSetCache($cacheName,$carouselSettings,24*60*60);
 
         return $carouselSettings;
     }

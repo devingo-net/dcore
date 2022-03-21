@@ -87,7 +87,7 @@ $configColors = Theme::getConfig('colors', [
 		'normal' => '#1e87f0',
 		'dark'   => '#106bc6'
 	],
-], true);
+]);
 
 CSF::createSection($themeOptionsName, [
 	'parent' => 'style_options',
