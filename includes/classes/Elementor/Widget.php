@@ -4,7 +4,7 @@
  *  Customize Elementor Widget Base
  *
  * @category    Elementor
- * @version     1.4.5
+ * @version     1.0.2
  * @since       1.0.0
  */
 
@@ -22,6 +22,7 @@ use DCore\Elementor;
 use DCore\Helper;
 use DCore\Theme;
 use Exception;
+use JsonException;
 
 /**
  * Class DC_Widget
@@ -341,7 +342,7 @@ class Widget extends Widget_Base
         if ($styleConfigs !== false && !empty($styleConfigs)) {
             try {
                 $styleConfigs = json_decode($styleConfigs, true, 512, JSON_THROW_ON_ERROR);
-            } catch (\JsonException $e) {
+            } catch (JsonException $e) {
                 $styleConfigs = [];
             }
         }
@@ -1218,12 +1219,18 @@ class Widget extends Widget_Base
      */
     public function getSwiperCarouselOptions(array $settings): string
     {
-        $cacheName = 'dc_carousel_options_' . crc32(serialize($settings));
+        $widgetHash = crc32(serialize($settings));
+        $cacheName = 'carousel_options_' . $widgetHash;
+        $stylesCacheName = 'carousel_styles_' . $widgetHash;
         $carouselSettings = dcGetCache($cacheName);
+        $carouselStyles = dcGetCache($stylesCacheName);
 
-        if ($carouselSettings !== false){
+        if ($carouselSettings !== false && $carouselStyles !== false && is_array($carouselStyles)) {
+            $this->styles = array_merge($this->styles, $carouselStyles);
             return $carouselSettings;
         }
+
+        $customStyles = [];
 
         $carouselSettings = [
             'breakpoints' => [
@@ -1256,8 +1263,8 @@ class Widget extends Widget_Base
                 $carouselSettings['breakpoints'][361]['slidesPerColumn'] = $settings['slidesPerColumn'];
                 $carouselSettings['breakpoints'][769]['slidesPerColumn'] = $settings['slidesPerColumn'];
 
-                $this->styles['{{WRAPPER}} .swiper-wrapper .swiper-slide'] = 'height: calc((100% - ' . ((int)$settings['spaceBetween'] * ((int)$settings['slidesPerColumn'] - 1)) . 'px) / ' . $settings['slidesPerColumn'] . ');';
-                $this->styles['{{WRAPPER}} .swiper-container'] = 'height: 100%; height: 100%; margin-left: auto; margin-right: auto;';
+                $customStyles['{{WRAPPER}} .swiper-wrapper .swiper-slide'] = 'height: calc((100% - ' . ((int)$settings['spaceBetween'] * ((int)$settings['slidesPerColumn'] - 1)) . 'px) / ' . $settings['slidesPerColumn'] . ');';
+                $customStyles['{{WRAPPER}} .swiper-container'] = 'height: 100%; height: 100%; margin-left: auto; margin-right: auto;';
             }
 
         } else {
@@ -1327,37 +1334,32 @@ class Widget extends Widget_Base
             'nextEl' => '.slider-button-next',
             'prevEl' => '.slider-button-prev'
         ];
-        if ($settings['sliderNavs'] !== 'true') {
-            $carouselSettings['breakpoints'][769]['navigation'] = false;
-        }
-        if ($settings['sliderNavs_tablet'] !== 'true') {
-            $carouselSettings['breakpoints'][361]['navigation'] = false;
-        }
-        if ($settings['sliderNavs_mobile'] !== 'true') {
-            $carouselSettings['breakpoints'][0]['navigation'] = false;
-        }
+
+        $carouselSettings['breakpoints'][769]['navigation'] = $settings['sliderNavs'] !== 'true' ? false : $carouselSettings['navigation'];
+
+        $carouselSettings['breakpoints'][361]['navigation'] = $settings['sliderNavs_tablet'] !== 'true' ? false : $carouselSettings['navigation'];
+
+        $carouselSettings['breakpoints'][0]['navigation'] = $settings['sliderNavs_mobile'] !== 'true' ? false : $carouselSettings['navigation'];
 
         $carouselSettings['pagination'] = [
             'el' => '.slider-pagination',
             'type' => 'bullets',
             'clickable' => true
         ];
-        if ($settings['sliderPagination'] !== 'true') {
-            $carouselSettings['breakpoints'][769]['pagination'] = false;
-        }
-        if ($settings['sliderPagination_tablet'] !== 'true') {
-            $carouselSettings['breakpoints'][361]['pagination'] = false;
-        }
-        if ($settings['sliderPagination_mobile'] !== 'true') {
-            $carouselSettings['breakpoints'][0]['pagination'] = false;
-        }
+
+        $carouselSettings['breakpoints'][769]['pagination'] = $settings['sliderPagination'] !== 'true' ? false : $carouselSettings['pagination'];
+
+        $carouselSettings['breakpoints'][361]['pagination'] = $settings['sliderPagination_tablet'] !== 'true' ? false : $carouselSettings['pagination'];
+
+        $carouselSettings['breakpoints'][0]['pagination'] = $settings['sliderPagination_mobile'] !== 'true' ? false : $carouselSettings['pagination'];
+
 
         if ($settings['sliderScrollbar'] === 'true') {
             $carouselSettings['scrollbar'] = [
                 'el' => '.slider-scrollbar'
             ];
         } else {
-            $this->styles['{{WRAPPER}} .slider-scrollbar'] = 'display: none !important;';
+            $customStyles['{{WRAPPER}} .slider-scrollbar'] = 'display: none !important;';
         }
 
         if (empty($carouselSettings['breakpoints'][0])) {
@@ -1372,11 +1374,14 @@ class Widget extends Widget_Base
 
         try {
             $carouselSettings = json_encode($carouselSettings, JSON_THROW_ON_ERROR);
-        } catch (\JsonException $e) {
+        } catch (JsonException $e) {
             $carouselSettings = '{}';
         }
 
-        dcSetCache($cacheName,$carouselSettings,24*60*60);
+        $this->styles = array_merge($this->styles, $customStyles);
+
+        dcSetCache($cacheName, $carouselSettings, 24 * 60 * 60);
+        dcSetCache($stylesCacheName, $customStyles, 24 * 60 * 60);
 
         return $carouselSettings;
     }
@@ -1391,6 +1396,11 @@ class Widget extends Widget_Base
      */
     public function inlineStyles($styles, bool $echo = true): string
     {
+        $cacheName = 'widget_inline_styles_' . sha1(serialize($styles));
+        $output = dcGetFileCache($cacheName);
+        if ($output !== false) {
+            return $output;
+        }
         $output = '<style id="' . esc_attr($this->name) . '-inline-styles">' . PHP_EOL;
         if (is_array($styles)) {
             foreach ($styles as $selector => $style) {
@@ -1403,6 +1413,8 @@ class Widget extends Widget_Base
         if ($echo) {
             echo $output;
         }
+
+        dcSetCache($cacheName, $output, 12 * 60 * 60);
 
         return $output;
     }
