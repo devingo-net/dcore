@@ -60,7 +60,7 @@ class Widget extends Widget_Base
         }
 
         if ($this->widgetConfigs !== false && isset($this->widgetConfigs['js-file'])) {
-            wp_enqueue_script(THEME_PREFIX . '-widget-' . $this->class, get_template_directory_uri() . $this->widgetConfigs['js-file']);
+            wp_enqueue_script(THEME_PREFIX . '-widget-' . $this->class, get_template_directory_uri() . $this->widgetConfigs['js-file'],['jquery']);
         }
 
         if ($this->widgetConfigs !== false && isset($this->widgetConfigs['css-file'])) {
