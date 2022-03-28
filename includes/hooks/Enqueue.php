@@ -17,15 +17,15 @@ function dcEnqueueScripts()
 {
     $currentTheme = wp_get_theme();
     if (function_exists('is_checkout') && is_checkout()) {
-        wp_enqueue_script(THEME_PREFIX . '-theme-admin-global', THEME_ASSETS_SCRIPT_URI . 'leaflet.js',[],$currentTheme->get('Version'));
+        wp_enqueue_script(THEME_PREFIX . '-theme-admin-global', THEME_ASSETS_SCRIPT_URI . 'leaflet.js', [], $currentTheme->get('Version'));
     }
-    wp_enqueue_script(THEME_PREFIX . '-theme-script', THEME_DIST_URI . 'script.js', ['wp-util'],$currentTheme->get('Version'));
-    wp_localize_script(THEME_PREFIX . '-theme-script', 'themeScriptParams', [
+    wp_enqueue_script(THEME_PREFIX . '-theme-script', THEME_DIST_URI . 'script.js', ['wp-util'], $currentTheme->get('Version'));
+    wp_localize_script(THEME_PREFIX . '-theme-script', 'themeScriptParams', apply_filters('dc_frontend_main_script_params', [
         'pageID' => get_the_ID(),
         'ajaxNonce' => wp_create_nonce('ajax-nonce'),
         'ajaxURL' => admin_url('admin-ajax.php'),
         'ajaxError' => __('An error occurred while processing!', THEME_TEXTDOMAIN),
-    ]);
+    ]));
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -39,12 +39,12 @@ function dcEnqueueStyles()
 {
     $currentTheme = wp_get_theme();
     if (function_exists('is_checkout') && is_checkout()) {
-        wp_enqueue_style(THEME_PREFIX . '-theme-admin-global', THEME_ASSETS_STYLE_URI . 'leaflet.css',[],$currentTheme->get('Version'));
+        wp_enqueue_style(THEME_PREFIX . '-theme-admin-global', THEME_ASSETS_STYLE_URI . 'leaflet.css', [], $currentTheme->get('Version'));
     }
-    if (!is_rtl() && file_exists(THEME_DIST_DIR . 'ltr.css')) {
-        wp_enqueue_style(THEME_PREFIX . '-theme-style', THEME_DIST_URI . 'ltr.css',[],$currentTheme->get('Version'));
+    if (!is_rtl() && file_exists(THEME_DIST_DIR . DSP . 'ltr.css')) {
+        wp_enqueue_style(THEME_PREFIX . '-theme-style', THEME_DIST_URI . 'ltr.css', [], $currentTheme->get('Version'));
     } else {
-        wp_enqueue_style(THEME_PREFIX . '-theme-style', THEME_DIST_URI . 'style.css',[],$currentTheme->get('Version'));
+        wp_enqueue_style(THEME_PREFIX . '-theme-style', THEME_DIST_URI . 'style.css', [], $currentTheme->get('Version'));
     }
     wp_add_inline_style(THEME_PREFIX . '-theme-style', Theme::dynamicStyles());
 }
