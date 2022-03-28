@@ -340,3 +340,60 @@ function dcGetCache(string $name, $default = false, string $group = 'default')
     }
     return $dcCache->get($name, $default, $group);
 }
+
+
+
+/**
+ * get template part
+ *
+ * @param string $path
+ * @param array $args
+ * @param bool $return
+ * @return void|string
+ */
+function dcGetTemplatePart(string $path, array $args = [], bool $return = false)
+{
+    if ($return) {
+        ob_start();
+    }
+    Theme::getTemplatePart($path, $args);
+    if ($return) {
+        return ob_get_clean();
+    }
+}
+
+/**
+ * get elementor widget without elementor
+ *
+ * @param string $name
+ * @param array $options
+ * @param string $style
+ */
+function dcGetElementorWidget(string $name, array $options = [],string $style = 'default')
+{
+    $widgetPath = THEME_TEMPLATES_DIR . DSP . 'shortcodes' . DSP . $name . DSP;
+    if (!file_exists($widgetPath)) {
+        return;
+    }
+    $assetName = THEME_PREFIX . '-widget-' . $name;
+    if (file_exists($widgetPath . 'style.css') && !wp_style_is($assetName)) {
+        add_action('wp_footer',function () use ($assetName, $widgetPath) {
+            echo '<style id="inline-'.$assetName.'">';
+            echo file_get_contents($widgetPath . 'style.css');
+            echo '</style>';
+        });
+    }
+
+    if (file_exists($widgetPath . 'script.js') && !wp_script_is($assetName)) {
+        add_action('wp_footer',function () use ($name) {
+            echo '<script src="'.THEME_SHORTCODES_URI . $name . '/script.js"></script>';
+        });
+    }
+
+    if ($style === 'default'){
+        Theme::getTemplatePart('shortcodes/' . $name . '/index',$options);
+        return;
+    }
+
+    Theme::getTemplatePart('shortcodes/' . $name .'/' . $style . '/index',$options);
+}
