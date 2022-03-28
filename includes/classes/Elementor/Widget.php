@@ -60,7 +60,7 @@ class Widget extends Widget_Base
         }
 
         if ($this->widgetConfigs !== false && isset($this->widgetConfigs['js-file'])) {
-            wp_enqueue_script(THEME_PREFIX . '-widget-' . $this->class, get_template_directory_uri() . $this->widgetConfigs['js-file'],['jquery']);
+            wp_enqueue_script(THEME_PREFIX . '-widget-' . $this->class, get_template_directory_uri() . $this->widgetConfigs['js-file'], ['jquery']);
         }
 
         if ($this->widgetConfigs !== false && isset($this->widgetConfigs['css-file'])) {
@@ -246,6 +246,8 @@ class Widget extends Widget_Base
         $this->end_controls_section();
 
         parent::register_controls();
+        do_action('dc_elementor_widgets_register_controls', $this);
+        do_action('dc_elementor_widget_' . $this->class . '_register_controls', $this);
     }
 
     /**
@@ -326,6 +328,10 @@ class Widget extends Widget_Base
                 $templateFile = $this->widgetStyles[0]['template'] ?? '';
             }
         }
+
+
+        $settings = apply_filters('dc_elementor_widgets_settings', $settings, $widgetClasses);
+        $settings = apply_filters('dc_elementor_widget_' . $this->class . '_settings', $settings, $widgetClasses);
 
         echo '<div class="' . implode(' ', $widgetClasses) . '">';
 
