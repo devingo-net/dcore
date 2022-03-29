@@ -424,7 +424,7 @@ class Theme {
 		if ( !isset($globalCards[$type]) || empty($globalCards[$type]) ) {
 			return [];
 		}
-
+		$globalCards = $globalCards[$type];
 		$templateOptions = [];
 		foreach ( $globalCards as $patch => $name ) {
 			$templateOptions[$type . DSP . $patch] = $name;
