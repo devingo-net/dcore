@@ -4,37 +4,51 @@ namespace DCore\Elementor\Modules\Menu;
 
 use ElementorPro\Modules\ThemeBuilder\Documents\Theme_Section_Document;
 
-class Document extends Theme_Section_Document {
+class Document extends Theme_Section_Document
+{
+    /**
+     * @inheritDoc
+     * @return array
+     */
+    public static function get_properties(): array
+    {
+        $properties = parent::get_properties();
 
-	public static function get_properties() {
-		$properties = parent::get_properties();
+        $properties['location'] = 'menu';
 
-		$properties['location'] = 'menu';
+        return $properties;
+    }
 
-		return $properties;
-	}
+    protected static function get_editor_panel_categories(): array
+    {
+        $categories = [
+            THEME_PREFIX . '_menu' => [
+                'title' => __('Menu widgets', THEME_TEXTDOMAIN),
+            ],
+        ];
 
-	protected static function get_editor_panel_categories () {
-		$categories = [
-			THEME_PREFIX . '_menu' => [
-				'title' => __('Menu widgets', THEME_TEXTDOMAIN),
-			],
-		];
-
-		return array_merge($categories, parent::get_editor_panel_categories());
-	}
+        return array_merge($categories, parent::get_editor_panel_categories());
+    }
 
 
-	protected static function get_site_editor_type() : string {
-		return 'menu';
-	}
+    protected static function get_site_editor_type(): string
+    {
+        return 'menu';
+    }
 
-	public static function get_title() : string {
-		return __( 'Menu', THEME_TEXTDOMAIN );
-	}
+    public static function get_title(): string
+    {
+        return __('Menu', THEME_TEXTDOMAIN);
+    }
 
-	protected static function get_site_editor_icon() : string {
-		return 'eicon-apps';
-	}
+    public function get_name(): string
+    {
+        return 'menu';
+    }
+
+    protected static function get_site_editor_icon(): string
+    {
+        return 'eicon-apps';
+    }
 
 }
