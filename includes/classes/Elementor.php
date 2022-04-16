@@ -70,7 +70,7 @@ class Elementor {
 	 */
 	public static function getWidgetStyles ($widgetConfigs = []) {
 		if ( empty($widgetConfigs) ) {
-			$widgetConfigs = Configs::$shortcodes;
+			$widgetConfigs = Configs::getShortcodes();
 		}
 		if ( $widgetConfigs === false ) {
 			return [];
