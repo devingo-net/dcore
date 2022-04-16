@@ -4,7 +4,7 @@
  *  Hooks Loader
  *
  * @category   Loader
- * @version    1.0.0
+ * @version    1.0.8
  * @since      1.0.0
  */
 
@@ -15,3 +15,4 @@ require_once __DIR__.'/hooks/Ajax.php';
 require_once __DIR__.'/hooks/Query.php';
 require_once __DIR__.'/hooks/Metabox.php';
 require_once __DIR__.'/hooks/Comments.php';
+require_once __DIR__.'/hooks/Updater.php';

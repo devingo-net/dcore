@@ -4,6 +4,10 @@ namespace DCore\Elementor\Modules\Menu;
 
 use ElementorPro\Modules\ThemeBuilder\Documents\Theme_Section_Document;
 
+/**
+ * Class Menu Document
+ * @package DCore\Elementor\Modules\Menu
+ */
 class Document extends Theme_Section_Document
 {
     /**
