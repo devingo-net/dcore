@@ -10,7 +10,7 @@
 
 namespace DCore;
 
-use JsonException;
+use Exception;
 
 /**
  * Class Theme
@@ -467,8 +467,8 @@ class Theme {
 		}
 
 		try {
-			$file = json_decode($file, true, 512, JSON_THROW_ON_ERROR);
-		} catch ( JsonException $e ) {
+			$file = json_decode($file, true);
+		} catch ( Exception $e ) {
 			$file = [];
 		}
 
@@ -476,6 +476,6 @@ class Theme {
 	}
 
 	public static function coreVersion () : string {
-		return "1.5.0";
+		return "1.1.2";
 	}
 }

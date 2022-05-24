@@ -1,9 +1,8 @@
 <?php
-
 /**
+ * Hook which related to ajax requests
  *
- *
- * @category
+ * @category   Hooks
  * @version    1.0.0
  * @since      1.0.0
  */

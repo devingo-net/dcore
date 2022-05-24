@@ -2,6 +2,15 @@
 
 namespace DCore\Elementor\Modules\Page;
 
+if (!class_exists('\ElementorPro\Modules\ThemeBuilder\Documents\Single_Page')) {
+    class Document
+    {
+
+    }
+
+    return;
+}
+
 use ElementorPro\Modules\ThemeBuilder\Documents\Single_Page;
 
 class Document extends Single_Page {

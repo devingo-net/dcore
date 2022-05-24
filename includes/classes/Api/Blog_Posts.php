@@ -11,7 +11,7 @@
 namespace DCore\Api;
 
 use ElementorPro\Modules\QueryControl\Module as Module_Query;
-use JsonException;
+use Exception;
 use DCore\Api;
 use DCore\Elementor\Modules\Page\Widgets\Blog_Posts as Blog_Posts_Widget;
 use DCore\Helper;
@@ -39,8 +39,8 @@ class Blog_Posts extends Api {
 			self::responseWarning(__('Page is not found!', THEME_TEXTDOMAIN));
 		}
 		try {
-			$elementorMetaData = json_decode($elementorMetaData, true, 512, JSON_THROW_ON_ERROR);
-		} catch ( JsonException $e ) {
+			$elementorMetaData = json_decode($elementorMetaData, true);
+		} catch ( Exception $e ) {
 			$elementorMetaData = [];
 		}
 		$widgetSettings = Helper::arraySearch($elementorMetaData, ['id' => $params['widgetID']]);
@@ -102,6 +102,7 @@ class Blog_Posts extends Api {
 				'paginateKey' => $widgetSettings['paginateKey'],
 				'totalPages'  => $widgetSettings['totalPages'],
 				'currentPage' => $widgetSettings['currentPage'],
+				'midSize' => $widgetSettings['midSize'],
 				'base' => wp_get_referer() . '%_%',
 			]);
 			$result['pagination'] = ob_get_clean();

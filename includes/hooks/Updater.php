@@ -2,6 +2,7 @@
 /**
  * Dcore updater hooks
  *
+ * @category   Hooks
  * @package DCore
  * @since 1.0.8
  */

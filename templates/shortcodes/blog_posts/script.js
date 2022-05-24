@@ -1,12 +1,12 @@
 (function ($) {
     "use strict";
 
-    $(document).on('click', '.dc-blog_posts-widget.paginate-type-number.ajax-paginate .page-numbers a', function () {
+    $(document).on('click', '.blog_posts-widget.paginate-type-number.ajax-paginate .page-numbers a', function () {
         let currentPageNumber = parseInt($(this).parents('.page-numbers').find('.current').text());
         let pageNumber = 0;
 
         let widgetID = $(this).parents('[data-id]').data('id');
-        let widgetParent = $(this).parents('.dc-blog_posts-widget');
+        let widgetParent = $(this).parents('.blog_posts-widget');
 
         if ($(this).hasClass('next')) {
             pageNumber = currentPageNumber + 1;
@@ -38,10 +38,10 @@
         return false;
     });
 
-    $(document).on('click', '.dc-blog_posts-widget .widget-load-more .load-more-btn', function () {
+    $(document).on('click', '.blog_posts-widget .widget-load-more .load-more-btn', function () {
         let pageNumber = $(this).attr('data-page') ?? 2;
         let widgetID = $(this).parents('[data-id]').data('id');
-        let widgetParent = $(this).parents('.dc-blog_posts-widget');
+        let widgetParent = $(this).parents('.blog_posts-widget');
         if(!isNaN(pageNumber)){
             pageNumber = parseInt(pageNumber);
         }
@@ -69,10 +69,10 @@
         });
     });
 
-    $(document).on('load_more', '.dc-blog_posts-widget .widget-auto-load', function () {
+    $(document).on('load_more', '.blog_posts-widget .widget-auto-load', function () {
         let pageNumber = $(this).attr('data-page') ?? 2;
         let widgetID = $(this).parents('[data-id]').data('id');
-        let widgetParent = $(this).parents('.dc-blog_posts-widget');
+        let widgetParent = $(this).parents('.blog_posts-widget');
         if(!isNaN(pageNumber)){
             pageNumber = parseInt(pageNumber);
         }
@@ -101,8 +101,8 @@
     });
 
     $(window).on('scroll',function () {
-        $('.dc-blog_posts-widget .widget-auto-load').each(function () {
-            let widgetParent = $(this).parents('.dc-blog_posts-widget');
+        $('.blog_posts-widget .widget-auto-load').each(function () {
+            let widgetParent = $(this).parents('.blog_posts-widget');
             if($(window).scrollTop() + $(window).height() > $(this).offset().top){
                 if(!widgetParent.hasClass('widget-loading')) {
                     $(this).trigger('load_more');

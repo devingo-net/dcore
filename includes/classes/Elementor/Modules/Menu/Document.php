@@ -2,6 +2,15 @@
 
 namespace DCore\Elementor\Modules\Menu;
 
+if (!class_exists('\ElementorPro\Modules\ThemeBuilder\Documents\Theme_Section_Document')) {
+    class Document
+    {
+
+    }
+
+    return;
+}
+
 use ElementorPro\Modules\ThemeBuilder\Documents\Theme_Section_Document;
 
 /**

@@ -63,6 +63,7 @@ function dcAdminEnqueueStyles()
  */
 function dcAdminEnqueueScripts()
 {
+    wp_enqueue_media();
     wp_enqueue_script(THEME_PREFIX . '-theme-admin-metabox', THEME_ASSETS_SCRIPT_URI . 'admin/metabox.js');
     wp_enqueue_script(THEME_PREFIX . '-theme-admin-global', THEME_ASSETS_SCRIPT_URI . 'admin/global.js');
     wp_localize_script(THEME_PREFIX . '-theme-admin-global', 'themeScriptParams', [

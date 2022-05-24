@@ -1,5 +1,4 @@
 <?php
-
 /**
  *  Meta box hooks
  *
@@ -7,9 +6,6 @@
  * @version     1.0.0
  * @since       1.0.0
  */
-
-use Elementor\TemplateLibrary\Source_Local;
-
 
 /**
  * add meta box custom locations
@@ -70,7 +66,7 @@ function dcMetaBoxSave($post_id)
 function dcNavMenuCustomFields($item_id, $item, $depth, $args, $id)
 {
     $templateItems = [];
-    $themeLibraries = new Source_Local();
+    $themeLibraries = new \Elementor\TemplateLibrary\Source_Local();
     if (!empty($themeLibraries->get_items(['type' => 'menu']))) {
         foreach ($themeLibraries->get_items(['type' => 'menu']) as $libraryItem) {
             $templateItems[$libraryItem['template_id']] = $libraryItem['title'];

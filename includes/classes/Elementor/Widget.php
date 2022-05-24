@@ -10,36 +10,37 @@
 
 namespace DCore\Elementor;
 
-use Elementor\Controls_Manager;
-use Elementor\Group_Control_Background;
-use Elementor\Group_Control_Border;
-use Elementor\Group_Control_Box_Shadow;
-use Elementor\Group_Control_Text_Shadow;
-use Elementor\Group_Control_Typography;
-use Elementor\Widget_Base;
+if (!class_exists("\Elementor\Widget_Base")) {
+    class Widget
+    {
+
+    }
+
+    return;
+}
+
 use DCore\Configs;
 use DCore\Elementor;
 use DCore\Helper;
 use DCore\Theme;
 use Exception;
-use JsonException;
 
 /**
  * Class DC_Widget
  *
  * @package DCore\Elementor
  */
-class Widget extends Widget_Base
+class Widget extends \Elementor\Widget_Base
 {
-    protected string $class = '';
-    protected string $name = '';
-    protected string $title = '';
-    protected string $icon = '';
-    protected array $categories = [];
+    protected $class = '';
+    protected $name = '';
+    protected $title = '';
+    protected $icon = '';
+    protected $categories = [];
     protected $widgetStyles = [];
-    protected array $jsTemplates = [];
+    protected $jsTemplates = [];
     public $cardStyle = false;
-    public array $styles = [];
+    public $styles = [];
     public $widgetConfigs = [];
 
     /**
@@ -134,7 +135,7 @@ class Widget extends Widget_Base
         if ($this->widgetStyles !== false) {
             $this->start_controls_section('widget_style_settings_section', [
                 'label' => __('Widget Designs', THEME_TEXTDOMAIN),
-                'tab' => Controls_Manager::TAB_CONTENT,
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]);
 
             $widgetStyleOptions = [];
@@ -149,7 +150,7 @@ class Widget extends Widget_Base
 
             $this->add_control('widgetStyle', [
                 'label' => __('Widget Style', THEME_TEXTDOMAIN),
-                'type' => Controls_Manager::SELECT,
+                'type' => \Elementor\Controls_Manager::SELECT,
                 'default' => array_key_first($widgetStyleOptions),
                 'options' => $widgetStyleOptions,
             ]);
@@ -160,7 +161,7 @@ class Widget extends Widget_Base
                 $parsedOption = [];
                 $this->start_controls_section('widget_style_colors_section', [
                     'label' => __('Colors', THEME_TEXTDOMAIN),
-                    'tab' => Controls_Manager::TAB_STYLE,
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
                 ]);
 
                 foreach ($widgetColorOptions as $key => $colors) {
@@ -187,7 +188,7 @@ class Widget extends Widget_Base
                     foreach ($parsedOption as $key => $item) {
                         $this->add_control($key, [
                             'label' => $item['name'] ?? $key,
-                            'type' => Controls_Manager::COLOR,
+                            'type' => \Elementor\Controls_Manager::COLOR,
                             'condition' => $item['conditions'] ?? []
                         ]);
                     }
@@ -200,14 +201,14 @@ class Widget extends Widget_Base
 
         $this->start_controls_section('widget_visibility_settings_section', [
             'label' => __('Visibility', THEME_TEXTDOMAIN),
-            'tab' => Controls_Manager::TAB_ADVANCED,
+            'tab' => \Elementor\Controls_Manager::TAB_ADVANCED,
         ]);
 
 
         $this->add_control('hideBeforeLogin', [
             'label' => __('Hide Before Login', THEME_TEXTDOMAIN),
             'desc' => __('The html would not be rendered', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'yes',
@@ -216,7 +217,7 @@ class Widget extends Widget_Base
         $this->add_control('hideAfterLogin', [
             'label' => __('Hide After Login', THEME_TEXTDOMAIN),
             'desc' => __('The html would not be rendered', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'yes',
@@ -226,7 +227,7 @@ class Widget extends Widget_Base
         $this->add_control('hideInMobile', [
             'label' => __('Hide in Mobile', THEME_TEXTDOMAIN),
             'desc' => __('The html would not be rendered', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'yes',
@@ -236,7 +237,7 @@ class Widget extends Widget_Base
         $this->add_control('hideInDesktop', [
             'label' => __('Hide in Desktop', THEME_TEXTDOMAIN),
             'desc' => __('The html would not be rendered', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'yes',
@@ -347,8 +348,8 @@ class Widget extends Widget_Base
         $styleConfigs = Theme::getShortcodeFileContent($this->class, 'style.json');
         if ($styleConfigs !== false && !empty($styleConfigs)) {
             try {
-                $styleConfigs = json_decode($styleConfigs, true, 512, JSON_THROW_ON_ERROR);
-            } catch (JsonException $e) {
+                $styleConfigs = json_decode($styleConfigs, true);
+            } catch (Exception $e) {
                 $styleConfigs = [];
             }
         }
@@ -403,7 +404,7 @@ class Widget extends Widget_Base
 
         $this->start_controls_section($prefix . '_styles', [
             'label' => $title,
-            'tab' => Controls_Manager::TAB_STYLE,
+            'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             'condition' => $condition
         ]);
         $modesDefault = [
@@ -450,7 +451,7 @@ class Widget extends Widget_Base
             if (!in_array('opacity', $excludes, false)) {
                 $this->add_responsive_control($prefix . 'Opacity' . $keyName, [
                     'label' => __('Opacity', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::SLIDER,
+                    'type' => \Elementor\Controls_Manager::SLIDER,
                     'devices' => ['desktop', 'tablet', 'mobile'],
                     'desktop_default' => [
                         'unit' => '%',
@@ -483,7 +484,7 @@ class Widget extends Widget_Base
 
                 $this->add_responsive_control($prefix . 'FlexAlign' . $keyName, [
                     'label' => __('Box Alignment', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::CHOOSE,
+                    'type' => \Elementor\Controls_Manager::CHOOSE,
                     'options' => [
                         'left' => [
                             'title' => __('Left', THEME_TEXTDOMAIN),
@@ -513,7 +514,7 @@ class Widget extends Widget_Base
             if (!in_array('font', $excludes, false)) {
 
                 if (!in_array('typography', $excludes, false)) {
-                    $this->add_group_control(Group_Control_Typography::get_type(), [
+                    $this->add_group_control(\Elementor\Group_Control_Typography::get_type(), [
                         'name' => $prefix . 'Typography' . $keyName,
                         'label' => __('Typography', THEME_TEXTDOMAIN),
                         'selector' => $modSelector . ' , ' . $modOptionsSelector . 'font',
@@ -526,7 +527,7 @@ class Widget extends Widget_Base
                 if (!in_array('fontsize', $excludes, false)) {
                     $this->add_responsive_control($prefix . 'FontSize' . $keyName, [
                         'label' => __('Font Size', THEME_TEXTDOMAIN),
-                        'type' => Controls_Manager::SLIDER,
+                        'type' => \Elementor\Controls_Manager::SLIDER,
                         'default' => [
                             'unit' => '%',
                         ],
@@ -559,7 +560,7 @@ class Widget extends Widget_Base
                 if (!in_array('textalign', $excludes, false)) {
                     $this->add_responsive_control($prefix . 'Align' . $keyName, [
                         'label' => __('Alignment', THEME_TEXTDOMAIN),
-                        'type' => Controls_Manager::CHOOSE,
+                        'type' => \Elementor\Controls_Manager::CHOOSE,
                         'options' => [
                             'left' => [
                                 'title' => __('Left', THEME_TEXTDOMAIN),
@@ -588,7 +589,7 @@ class Widget extends Widget_Base
                 if (!in_array('textcolor', $excludes, false)) {
                     $this->add_responsive_control($prefix . 'TextColor' . $keyName, [
                         'label' => __('Text Color', THEME_TEXTDOMAIN),
-                        'type' => Controls_Manager::COLOR,
+                        'type' => \Elementor\Controls_Manager::COLOR,
                         'selectors' => [
                             $modSelector => 'color: {{VALUE}}',
                             $modSelector . ' svg' => 'fill: {{VALUE}}; border-color: {{VALUE}}',
@@ -598,7 +599,7 @@ class Widget extends Widget_Base
                 }
 
                 if (!in_array('textshadow', $excludes, false)) {
-                    $this->add_group_control(Group_Control_Text_Shadow::get_type(), [
+                    $this->add_group_control(\Elementor\Group_Control_Text_Shadow::get_type(), [
                         'name' => $prefix . 'TextShadow' . $keyName,
                         'label' => __('Text Shadow', THEME_TEXTDOMAIN),
                         'selector' => $modSelector . ' , ' . $modOptionsSelector . 'text-shadow',
@@ -608,19 +609,19 @@ class Widget extends Widget_Base
             }
 
             if (!in_array('border', $excludes, false)) {
-                $this->add_group_control(Group_Control_Box_Shadow::get_type(), [
+                $this->add_group_control(\Elementor\Group_Control_Box_Shadow::get_type(), [
                     'name' => $prefix . 'BoxShadow' . $keyName,
                     'label' => __('Box Shadow', THEME_TEXTDOMAIN),
                     'selector' => $modSelector . ' , ' . $modOptionsSelector . 'box-shadow',
                 ]);
-                $this->add_group_control(Group_Control_Border::get_type(), [
+                $this->add_group_control(\Elementor\Group_Control_Border::get_type(), [
                     'name' => $prefix . 'Border' . $keyName,
                     'label' => __('Border', THEME_TEXTDOMAIN),
                     'selector' => $modSelector . ' , ' . $modOptionsSelector . 'border',
                 ]);
                 $this->add_responsive_control($prefix . 'BorderRadius' . $keyName, [
                     'label' => __('Border Radius', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::DIMENSIONS,
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%'],
                     'selectors' => [
                         $modSelector => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -633,7 +634,7 @@ class Widget extends Widget_Base
             if (!in_array('width', $excludes, false)) {
                 $this->add_responsive_control($prefix . 'Width' . $keyName, [
                     'label' => __('Width', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::SLIDER,
+                    'type' => \Elementor\Controls_Manager::SLIDER,
                     'default' => [
                         'unit' => '%',
                     ],
@@ -667,7 +668,7 @@ class Widget extends Widget_Base
             if (!in_array('height', $excludes, false)) {
                 $this->add_responsive_control($prefix . 'Height' . $keyName, [
                     'label' => __('Height', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::SLIDER,
+                    'type' => \Elementor\Controls_Manager::SLIDER,
                     'default' => [
                         'unit' => 'px',
                     ],
@@ -698,7 +699,7 @@ class Widget extends Widget_Base
             if (!in_array('padding', $excludes, false)) {
                 $this->add_responsive_control($prefix . 'Padding' . $keyName, [
                     'label' => __('Padding', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::DIMENSIONS,
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%'],
                     'selectors' => [
                         $modSelector => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -709,7 +710,7 @@ class Widget extends Widget_Base
             if (!in_array('margin', $excludes, false)) {
                 $this->add_responsive_control($prefix . 'Margin' . $keyName, [
                     'label' => __('Margin', THEME_TEXTDOMAIN),
-                    'type' => Controls_Manager::DIMENSIONS,
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => ['px', '%'],
                     'selectors' => [
                         $modSelector => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -719,7 +720,7 @@ class Widget extends Widget_Base
             }
 
             if (!in_array('background', $excludes, false)) {
-                $this->add_group_control(Group_Control_Background::get_type(), [
+                $this->add_group_control(\Elementor\Group_Control_Background::get_type(), [
                     'name' => $prefix . 'Background' . $keyName,
                     'label' => __('Background', THEME_TEXTDOMAIN),
                     'types' => ['classic', 'gradient'],
@@ -837,7 +838,7 @@ class Widget extends Widget_Base
 
         $this->add_control($id, [
             'label' => __('Card Style', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SELECT,
+            'type' => \Elementor\Controls_Manager::SELECT,
             'default' => array_key_first($templates),
             'options' => $templates,
         ]);
@@ -848,18 +849,18 @@ class Widget extends Widget_Base
 
         $this->start_controls_section('Widget_Style_settings', [
             'label' => __('Widget Colors', THEME_TEXTDOMAIN),
-            'tab' => Controls_Manager::TAB_STYLE,
+            'tab' => \Elementor\Controls_Manager::TAB_STYLE,
         ]);
 
 
         $this->add_control('primaryColor', [
             'label' => __('Primary Color', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::COLOR,
+            'type' => \Elementor\Controls_Manager::COLOR,
         ]);
 
         $this->add_control('secondaryColor', [
             'label' => __('Secondary Color', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::COLOR,
+            'type' => \Elementor\Controls_Manager::COLOR,
         ]);
 
         $this->end_controls_section();
@@ -875,7 +876,7 @@ class Widget extends Widget_Base
 
         $this->start_controls_section('Slider_settings', [
             'label' => __('Slider', THEME_TEXTDOMAIN),
-            'tab' => Controls_Manager::TAB_CONTENT,
+            'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             'hasStyle' => true,
             'prefix' => 'slider',
             'selector' => '.slider-wrapper .swiper-slide{{mode}} .slide-item',
@@ -892,7 +893,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('sliderDirection', [
             'label' => __('Slider Direction', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SELECT,
+            'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'horizontal',
             'options' => [
                 'horizontal' => __('Horizontal', THEME_TEXTDOMAIN),
@@ -901,7 +902,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('verticalSliderHeight', [
             'label' => __('Slider Height', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SLIDER,
+            'type' => \Elementor\Controls_Manager::SLIDER,
             'size_units' => ['px', '%', 'vh'],
             'range' => [
                 'px' => [
@@ -939,7 +940,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('slideAnimation', [
             'label' => __('Slide Animation', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SELECT,
+            'type' => \Elementor\Controls_Manager::SELECT,
             'default' => $optionsDefault['slideAnimation'] ?? 'none',
             'options' => [
                 'none' => __('None', THEME_TEXTDOMAIN),
@@ -951,7 +952,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('slidesCountMode', [
             'label' => __('Slides Count Mode', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('Count', THEME_TEXTDOMAIN),
             'label_off' => __('Auto', THEME_TEXTDOMAIN),
             'return_value' => 'count',
@@ -959,7 +960,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('slidesPerView', [
             'label' => __('Slides Per View', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::NUMBER,
+            'type' => \Elementor\Controls_Manager::NUMBER,
             'min' => 1,
             'max' => 20,
             'step' => 1,
@@ -974,7 +975,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('slidesWidth', [
             'label' => __('Slides Width', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SLIDER,
+            'type' => \Elementor\Controls_Manager::SLIDER,
             'size_units' => ['px', '%'],
             'range' => [
                 'px' => [
@@ -1001,7 +1002,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('verticalSlidesHeight', [
             'label' => __('Slides Height', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SLIDER,
+            'type' => \Elementor\Controls_Manager::SLIDER,
             'size_units' => ['px', '%'],
             'range' => [
                 'px' => [
@@ -1037,7 +1038,7 @@ class Widget extends Widget_Base
 
         $this->add_control('slidesColumn', [
             'label' => __('Slides Column', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1048,7 +1049,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('slidesPerColumn', [
             'label' => __('Slides Per Column', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::NUMBER,
+            'type' => \Elementor\Controls_Manager::NUMBER,
             'min' => 2,
             'max' => 20,
             'step' => 1,
@@ -1060,7 +1061,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('slidesHeight', [
             'label' => __('Slides Height', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SLIDER,
+            'type' => \Elementor\Controls_Manager::SLIDER,
             'size_units' => ['px', '%'],
             'range' => [
                 'px' => [
@@ -1095,7 +1096,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('slidesPerGroup', [
             'label' => __('Slides Per Group', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::NUMBER,
+            'type' => \Elementor\Controls_Manager::NUMBER,
             'min' => 1,
             'max' => 20,
             'step' => 1,
@@ -1103,7 +1104,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('spaceBetween', [
             'label' => __('Space Between', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::NUMBER,
+            'type' => \Elementor\Controls_Manager::NUMBER,
             'min' => 1,
             'max' => 500,
             'step' => 5,
@@ -1115,7 +1116,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('centeredSlides', [
             'label' => __('Centered Slides', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1123,7 +1124,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('allowTouchMove', [
             'label' => __('Allow Touch Move', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1131,7 +1132,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('freeMode', [
             'label' => __('Free Mode', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1142,7 +1143,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('infiniteLoop', [
             'label' => __('Infinite Loop', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1150,7 +1151,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('autoPlay', [
             'label' => __('Auto Play', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1158,7 +1159,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_control('autoPlayDuration', [
             'label' => __('Auto Play Duration', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::NUMBER,
+            'type' => \Elementor\Controls_Manager::NUMBER,
             'default' => $optionsDefault['autoPlayDuration'] ?? 6000,
             'condition' => [
                 'autoPlay' => 'true'
@@ -1166,7 +1167,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('sliderNavs', [
             'label' => __('Slider Navigations', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1178,7 +1179,7 @@ class Widget extends Widget_Base
         ]);
         $this->add_responsive_control('sliderPagination', [
             'label' => __('Slider Pagination', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1191,7 +1192,7 @@ class Widget extends Widget_Base
 
         $this->add_control('sliderScrollbar', [
             'label' => __('Slider Scroll Bar', THEME_TEXTDOMAIN),
-            'type' => Controls_Manager::SWITCHER,
+            'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __('True', THEME_TEXTDOMAIN),
             'label_off' => __('False', THEME_TEXTDOMAIN),
             'return_value' => 'true',
@@ -1379,8 +1380,8 @@ class Widget extends Widget_Base
         }
 
         try {
-            $carouselSettings = json_encode($carouselSettings, JSON_THROW_ON_ERROR);
-        } catch (JsonException $e) {
+            $carouselSettings = json_encode($carouselSettings);
+        } catch (Exception $e) {
             $carouselSettings = '{}';
         }
 

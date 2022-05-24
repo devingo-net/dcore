@@ -8,33 +8,35 @@
  * @since      1.0.0
  */
 
-if ( !defined('ABSPATH') ) {
-	exit;
+if (!defined('ABSPATH')) {
+    exit;
 }
 
 $paginateArgs = [
-	'type'      => 'list',
-	'show_all'  => true,
-	'prev_text' => '<i class="far fa-angle-left"></i>',
-	'next_text' => '<i class="far fa-angle-right"></i>',
+    'type' => 'list',
+    'prev_text' => '<i class="fas fa-angle-left"></i>',
+    'next_text' => '<i class="fas fa-angle-right"></i>'
 ];
-if ( isset($paginateKey) ) {
-	$paginateArgs['format'] = '?' . $paginateKey . '=%#%';
+if (isset($midSize)) {
+    $paginateArgs['mid_size'] = $midSize;
 }
-if ( isset($totalPages) ) {
-	$paginateArgs['total'] = $totalPages;
+if (isset($paginateKey)) {
+    $paginateArgs['format'] = '?' . $paginateKey . '=%#%';
 }
-if ( isset($totalPages) && $totalPages <= 1 ) {
-	return;
+if (isset($totalPages)) {
+    $paginateArgs['total'] = $totalPages;
 }
-if ( isset($currentPage) ) {
-	$paginateArgs['current'] = $currentPage;
+if (isset($totalPages) && $totalPages <= 1) {
+    return;
 }
-if ( isset($base) ) {
-	$paginateArgs['base'] = $base;
+if (isset($currentPage)) {
+    $paginateArgs['current'] = $currentPage;
+}
+if (isset($base)) {
+    $paginateArgs['base'] = $base;
 }
 ?>
 
 <div class="widget-pagination">
-	<?= paginate_links($paginateArgs) ?>
+    <?php echo paginate_links($paginateArgs); ?>
 </div>
