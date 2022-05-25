@@ -9904,6 +9904,14 @@ iframe.uk-cover {
     page-break-after: avoid;
   }
 }
+.bottom_navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
 }

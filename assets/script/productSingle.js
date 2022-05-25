@@ -88,7 +88,9 @@ import UIkit from "uikit";
 
 
                 $product_gallery[0].swiper.slideTo(0);
-                $gallery_nav[0].swiper.slideTo(0);
+                if ($gallery_nav.length > 0) {
+                    $gallery_nav[0].swiper.slideTo(0);
+                }
 
                 $product_img.wc_set_variation_attr('src', variation.image.src);
                 $product_img.wc_set_variation_attr('height', variation.image.src_h);

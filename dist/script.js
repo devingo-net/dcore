@@ -811,7 +811,11 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         $product_gallery[0].swiper.slideTo(0);
-        $gallery_nav[0].swiper.slideTo(0);
+
+        if ($gallery_nav.length > 0) {
+          $gallery_nav[0].swiper.slideTo(0);
+        }
+
         $product_img.wc_set_variation_attr('src', variation.image.src);
         $product_img.wc_set_variation_attr('height', variation.image.src_h);
         $product_img.wc_set_variation_attr('width', variation.image.src_w);
