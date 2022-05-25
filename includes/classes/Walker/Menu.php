@@ -34,8 +34,8 @@ class Menu extends \Walker_Nav_Menu {
 	 */
 	public function start_el (&$output, $item, $depth = 0, $args = [], $id = 0) : void {
 		$itemType = get_post_meta($item->ID, 'menu-type', true);
-		if ( empty($itemType) ) {
-			$output = '<li>';
+		if ( empty($itemType) || $itemType === false ) {
+            parent::start_el($output, $item, $depth, $args, $id);
 
 			return;
 		}
