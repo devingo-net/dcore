@@ -335,6 +335,9 @@ class Widget extends \Elementor\Widget_Base
         $settings = apply_filters('dc_elementor_widget_' . $this->class . '_settings', $settings, $widgetClasses);
 
         echo '<div class="' . implode(' ', $widgetClasses) . '">';
+        if (is_tax()) {
+            echo '<input type="hidden" name="taxonomy_query" value="active">';
+        }
 
         Theme::getTemplatePart(get_template_directory() . $templateFile . 'index.php', $settings, true);
         $this->afterRender($settings);
@@ -830,8 +833,8 @@ class Widget extends \Elementor\Widget_Base
             return;
         }
 
-        $templates = Configs::getGlobalCards();
-        $templates = $templates[$this->cardStyle] ?? [];
+        $templates = Theme::getCardsList($this->cardStyle,false);
+
         if (empty($templates)) {
             return;
         }

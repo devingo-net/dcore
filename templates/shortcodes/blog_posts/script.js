@@ -15,12 +15,18 @@
         } else if (!isNaN($(this).text())) {
             pageNumber = parseInt($(this).text());
         }
+        let taxonomyArgs = false;
+
+        if (widgetParent.find('[name="taxonomy_query"]').length > 0) {
+            taxonomyArgs = widgetParent.find('[name="taxonomy_query"]').val();
+        }
 
         widgetParent.addClass('widget-loading');
         API.send('Blog_Posts', 'getPagedPosts', {
             pageID: themeScriptParams.pageID,
             widgetID: widgetID,
-            page: pageNumber
+            page: pageNumber,
+            tax: taxonomyArgs
         }).then((response) => {
             if (typeof response.data.status !== 'undefined' && response.data.status) {
                 widgetParent.find('.widget-pagination').replaceWith(response.data.data.pagination);
@@ -48,10 +54,16 @@
 
         widgetParent.addClass('widget-loading');
 
+        let taxonomyArgs = false;
+
+        if (widgetParent.find('[name="taxonomy_query"]').length > 0) {
+            taxonomyArgs = widgetParent.find('[name="taxonomy_query"]').val();
+        }
         API.send('Blog_Posts', 'getPagedPosts', {
             pageID: themeScriptParams.pageID,
             widgetID: widgetID,
-            page: pageNumber
+            page: pageNumber,
+            tax: taxonomyArgs
         }).then((response) => {
             if (typeof response.data.status !== 'undefined' && response.data.status) {
                 if (Array.isArray(response.data.data.content) && response.data.data.content.length > 0) {
@@ -78,11 +90,17 @@
         }
 
         widgetParent.addClass('widget-loading');
+        let taxonomyArgs = false;
+
+        if (widgetParent.find('[name="taxonomy_query"]').length > 0) {
+            taxonomyArgs = widgetParent.find('[name="taxonomy_query"]').val();
+        }
 
         API.send('Blog_Posts', 'getPagedPosts', {
             pageID: themeScriptParams.pageID,
             widgetID: widgetID,
-            page: pageNumber
+            page: pageNumber,
+            tax: taxonomyArgs
         }).then((response) => {
             if (typeof response.data.status !== 'undefined' && response.data.status) {
                 if (Array.isArray(response.data.data.content) && response.data.data.content.length > 0) {

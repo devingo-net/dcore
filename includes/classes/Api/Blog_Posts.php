@@ -34,6 +34,23 @@ class Blog_Posts extends Api {
 		if ( $validate->fails() ) {
 			self::responseWarning(dcValidationHTML($validate));
 		}
+        if (isset($params['tax']) && $params['tax'] !== false) {
+            $taxonomyTemplateFinderQuery = new \WP_Query(array(
+                'post_type' => 'elementor_library',
+                'post_status' => 'publish',
+                'meta_query' => array(
+                    'relation' => 'AND',
+                    '_elementor_data' => array(
+                        'key' => '_elementor_data',
+                        'value' => $params['widgetID'],
+                        'compare' => 'LIKE'
+                    )
+                )
+            ));
+            if ($taxonomyTemplateFinderQuery->have_posts()) {
+                $params['pageID'] = $taxonomyTemplateFinderQuery->get_posts()[0]->ID;
+            }
+        }
 		$elementorMetaData = get_post_meta((int) $params['pageID'], '_elementor_data', true);
 		if ( !$elementorMetaData ) {
 			self::responseWarning(__('Page is not found!', THEME_TEXTDOMAIN));

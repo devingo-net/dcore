@@ -115,6 +115,21 @@ class Blog_Posts extends Widget
                 'number' => __('Number', THEME_TEXTDOMAIN),
                 'loadmore' => __('Load more', THEME_TEXTDOMAIN),
                 'autoload' => __('Auto load', THEME_TEXTDOMAIN)
+            ],
+            'condition' => [
+                'blogPosts_post_type!' => 'current_query'
+            ]
+        ]);
+        $this->add_control('paginateTypeCurrentQuery', [
+            'label' => __('Pagination Type', THEME_TEXTDOMAIN),
+            'type' => Controls_Manager::SELECT,
+            'default' => 'false',
+            'options' => [
+                'false' => __('False', THEME_TEXTDOMAIN),
+                'number' => __('Number', THEME_TEXTDOMAIN)
+            ],
+            'condition' => [
+                'blogPosts_post_type' => 'current_query'
             ]
         ]);
         $this->add_control('ajaxNumericPaginate', [
@@ -125,7 +140,8 @@ class Blog_Posts extends Widget
             'return_value' => 'true',
             'default' => 'true',
             'condition' => [
-                'paginateType' => 'number'
+                'paginateType' => 'number',
+                'blogPosts_post_type!' => 'current_query'
             ]
         ]);
 
@@ -138,7 +154,11 @@ class Blog_Posts extends Widget
             'step' => 1,
             'default' => 2,
             'condition' => [
-                'paginateType' => 'number'
+                'relation' => 'or',
+                'terms' => [
+                    'paginateType' => 'number',
+                    'paginateTypeCurrentQuery' => 'number'
+                ],
             ]
         ]);
 
@@ -152,8 +172,22 @@ class Blog_Posts extends Widget
         $settings['widgetClasses'] = [];
         $elementorQuery = Module_Query::instance();
         $settings['paginateKey'] = 'page_' . $this->get_id();
-        $settings['currentPage'] = isset($_GET[$settings['paginateKey']]) ? (int)$_GET[$settings['paginateKey']] : 1;
 
+        if ($settings['blogPosts_post_type'] === 'current_query') {
+            $settings['paginateType'] = $settings['paginateTypeCurrentQuery'];
+            $settings['ajaxNumericPaginate'] = 'false';
+        }
+        if ($settings['blogPosts_post_type'] === 'current_query') {
+            $settings['paginateKey'] = 'paged';
+        }
+        if (isset($_GET[$settings['paginateKey']]) && is_numeric($_GET[$settings['paginateKey']])) {
+            $settings['currentPage'] = (int)$_GET[$settings['paginateKey']];
+        } else {
+            $settings['currentPage'] = get_query_var($settings['paginateKey'], 1);
+        }
+        if (!is_numeric($settings['currentPage']) || $settings['currentPage'] < 1) {
+            $settings['currentPage'] = 1;
+        }
 
         $cacheName = 'dc_product_query_' . crc32(serialize($this->get_settings_for_display()));
 
