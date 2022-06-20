@@ -30,9 +30,9 @@ if ( !defined('ABSPATH') ) {
 <div class="uk-position-cover" style="background: rgba(0,0,0,.5)"></div>
 <div class="uk-position-center uk-position-medium uk-text-center">
     <div uk-slideshow-parallax="scale: 1,1,0.8">
-        <h2 uk-slideshow-parallax="x: 200,0,0"><a class="primary_color-normal" <?= $linkAttr ?>><?= $title ?></a></h2>
+        <h2 uk-slideshow-parallax="x: 200,0,0"><a class="primary_color-normal slider-title" <?= $linkAttr ?>><?= $title ?></a></h2>
 		<?php if ( !empty($description) ) { ?>
-            <p uk-slideshow-parallax="x: 400,0,0;"><?= $description ?></p>
+            <p class="slider-description" uk-slideshow-parallax="x: 400,0,0;"><?= $description ?></p>
 		<?php } ?>
     </div>
 </div>
